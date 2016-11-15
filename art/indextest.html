@@ -1,0 +1,10 @@
+---
+layout: default
+---
+ 
+            {% for thumbnail in site.static_files %}
+                {% if thumbnail.path contains "thumbnail" %}
+                <img src="{{site.baseurl}}{{thumbnail.path}}">
+                {%endif%}
+            {% endfor %}
+
