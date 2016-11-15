@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% include head.html %}
+ 
+{% capture id %}{{ page.url | replace:'/','' }}{% endcapture %}
+
+<body id="{{id}}">
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="container-fluid">
+        <div class="row">
+
+        {% include navbar.html %} 
+        
+        {{ content }} 
+
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  
+    
+</body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="{{ "/js/bootstrap.js" | prepend: full_base_url }}"></script>
+  <script src="{{ "/js/jquery.js" | prepend: full_base_url }}" ></script>
+
+
+</html>

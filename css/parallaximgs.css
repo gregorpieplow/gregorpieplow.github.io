@@ -1,0 +1,499 @@
+* {
+    box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.blend {
+    filter: grayscale(.3);
+}
+
+/*big screen*/
+
+@media (min-width: 992px) {
+
+#parallax-img-small {
+    display: none;
+  } 
+
+    #parallax-img-big{
+        transform: scale(.7,.7);
+        margin-left: -20%;
+    }
+
+    /*image layers*/
+
+    .scene li div{
+        background-repeat: no-repeat;
+        position: relative;
+        /*border: 1px dashed black;*/
+    }
+
+    #lay1 {
+    position: relative;
+    left: 68px;
+    top: 53px;
+    width: 1501px;
+    height: 1178px;
+    background: url("../images/parallax_lg/ebene-1.png");
+    }
+
+    #lay2 {
+    position: relative;
+    left: 158px;
+    top: 90px;
+    width: 1357px;
+    height: 1454px;
+    background: url("../images/parallax_lg/ebene-2.png");
+    }
+
+    #lay3 {
+    left: 256px;
+    top: 196px;
+    width: 1210px;
+    height: 1299px;
+    background: url("../images/parallax_lg/ebene-3.png");
+    }
+
+    #lay4 {
+    left: 406px;
+    top: 199px;
+    width: 779px;
+    height: 1026px;
+    background: url("../images/parallax_lg/ebene-4.png");
+    }
+
+    #lay5 {
+    left: 356px;
+    top: 450px;
+    width: 1015px;
+    height: 815px;
+    background: url("../images/parallax_lg/ebene-5.png");
+    }
+
+    #lay6 {
+    left: 416px;
+    top: 434px;
+    width: 747px;
+    height: 944px;
+    background: url("../images/parallax_lg/ebene-6.png");
+    }
+
+    #blend-lay7 {
+        mix-blend-mode: multiply;
+    }
+
+    #lay7 {
+    left: 750px;
+    top: 833px;
+    width: 107px;
+    height: 58px;
+    background: url("../images/parallax_lg/ebene-7.png");
+    }
+
+    #blend-lay8 {
+        mix-blend-mode: multiply;
+    }
+
+    #lay8 {
+    left: 521px;
+    top: 464px;
+    width: 622px;
+    height: 579px;
+    background: url("../images/parallax_lg/ebene-8.png");
+    }
+
+    #blend-lay9 {
+        mix-blend-mode: multiply;
+    }
+
+
+    #lay9 {
+    left: 783px;
+    top: 746px;
+    width: 146px;
+    height: 134px;
+    background: url("../images/parallax_lg/ebene-9.png");
+    }
+
+    #blend-lay10 {
+        mix-blend-mode: multiply;
+    }
+
+    #lay10 {
+    left: 492px;
+    top: 518px;
+    width: 672px;
+    height: 567px;
+    background: url("../images/parallax_lg/ebene-10.png");
+    }
+
+    /*color layers*/
+
+
+    #lay11 {
+    opacity: .1;
+    width: 1104px;
+    height: 878px;
+    background: url("../images/parallax_lg/color-lay.png");
+    background-repeat: no-repeat;
+    }
+
+    #lay15p {
+        left: 288px;
+        top: 839px;
+        mix-blend-mode: multiply;
+    }
+
+    #lay14p {
+        left: 288px;
+        top: 880px;
+        mix-blend-mode: multiply;
+    }
+
+    #lay13p {
+        left: 288px;
+        top: 921px;
+        mix-blend-mode: multiply;
+    }
+
+    #lay12p {
+        left: 288px;
+        top: 973px;
+        mix-blend-mode: multiply;
+
+    }
+    
+    #lay11p {
+        left: 288px;
+        top: 1028px;
+        mix-blend-mode: multiply;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+  #parallax-img-small {
+    display: none;
+  } 
+
+    #parallax-img-big{
+        transform: scale(.5,.5);
+        margin-top: -15%;
+        margin-left: -20%;
+    }
+
+    /*image layers*/
+
+    .scene li div{
+        background-repeat: no-repeat;
+        position: relative;
+        /*border: 1px dashed black;*/
+    }
+
+    #lay1 {
+    position: relative;
+    left: 68px;
+    top: 53px;
+    width: 1501px;
+    height: 1178px;
+    background: url("../images/parallax_lg/ebene-1.png");
+    }
+
+    #lay2 {
+    position: relative;
+    left: 158px;
+    top: 90px;
+    width: 1357px;
+    height: 1454px;
+    background: url("../images/parallax_lg/ebene-2.png");
+    }
+
+
+
+    #lay3 {
+    left: 256px;
+    top: 196px;
+    width: 1210px;
+    height: 1299px;
+    background: url("../images/parallax_lg/ebene-3.png");
+    }
+
+    #lay4 {
+    left: 406px;
+    top: 199px;
+    width: 779px;
+    height: 1026px;
+    background: url("../images/parallax_lg/ebene-4.png");
+    }
+
+    #lay5 {
+    left: 356px;
+    top: 450px;
+    width: 1015px;
+    height: 815px;
+    background: url("../images/parallax_lg/ebene-5.png");
+    }
+
+    #lay6 {
+    left: 416px;
+    top: 434px;
+    width: 747px;
+    height: 944px;
+    background: url("../images/parallax_lg/ebene-6.png");
+    }
+
+    #blend-lay7 {
+        mix-blend-mode: multiply;
+    }
+
+    #lay7 {
+    left: 750px;
+    top: 833px;
+    width: 107px;
+    height: 58px;
+    background: url("../images/parallax_lg/ebene-7.png");
+    }
+
+    #blend-lay8 {
+        mix-blend-mode: multiply;
+    }
+
+    #lay8 {
+    left: 521px;
+    top: 464px;
+    width: 622px;
+    height: 579px;
+    background: url("../images/parallax_lg/ebene-8.png");
+    }
+
+    #blend-lay9 {
+        mix-blend-mode: multiply;
+    }
+
+
+    #lay9 {
+    left: 783px;
+    top: 746px;
+    width: 146px;
+    height: 134px;
+    background: url("../images/parallax_lg/ebene-9.png");
+    }
+
+    #blend-lay10 {
+        mix-blend-mode: multiply;
+    }
+
+    #lay10 {
+    left: 492px;
+    top: 518px;
+    width: 672px;
+    height: 567px;
+    background: url("../images/parallax_lg/ebene-10.png");
+    }
+
+    /*color layers*/
+
+
+    #lay11 {
+    opacity: .1;
+    width: 1104px;
+    height: 878px;
+    background: url("../images/parallax_lg/color-lay.png");
+    background-repeat: no-repeat;
+    }
+
+    #lay15p {
+        left: 288px;
+        top: 839px;
+        mix-blend-mode: multiply;
+    }
+
+    #lay14p {
+        left: 288px;
+        top: 880px;
+        mix-blend-mode: multiply;
+    }
+
+    #lay13p {
+        left: 288px;
+        top: 921px;
+        mix-blend-mode: multiply;
+    }
+
+    #lay12p {
+        left: 288px;
+        top: 973px;
+        mix-blend-mode: multiply;
+
+    }#lay11p {
+        left: 288px;
+        top: 1028px;
+        mix-blend-mode: multiply;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+
+ #parallax-img-small{
+        transform: scale(.8,.8);
+        margin-left: -25%;
+    }
+
+#parallax-img-big {
+    display: none;
+  } 
+
+  .scene li div{
+        background-repeat: no-repeat;
+        position: relative;
+        /*border: 1px dashed black;*/
+    }
+
+  #lay1 {
+    left: 38px;
+    top: 29px;
+    width: 845px;
+    height: 840px;
+    background: url("../images/parallax_sm/ebene-1.png");
+    }
+
+    #lay2 {
+    left: 200px;
+    top: 244px;
+    width: 572px;
+    height: 532px;
+    background: url("../images/parallax_sm/ebene-2.png");
+    }
+
+     #blend-lay3-small {
+        mix-blend-mode: multiply;
+    }
+
+    #lay3 {
+    left: 293px;
+    top: 261px;
+    width: 350px;
+    height: 326px;
+    background: url("../images/parallax_sm/ebene-3.png");
+    }
+
+    #lay4 {
+    left: 279px;
+    top: 294px;
+    width: 373px;
+    height: 314px;
+    background: url("../images/parallax_sm/ebene-4.png");
+    }
+
+    #lay11 {
+    opacity: .1;
+    width: 680px;
+    height: 541px;
+    background: url("../images/parallax_sm/color-lay.png");
+    background-repeat: no-repeat;
+    }
+
+    #lay1p {
+        left: 174px;
+        top: 547px;
+        mix-blend-mode: multiply;
+    }
+    #lay2p {
+        left: 140px;
+        top: 502px;
+        mix-blend-mode: multiply;
+    }
+    #lay3p {
+        left: 131px;
+        top: 466px;
+        mix-blend-mode: multiply;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+
+#parallax-img-big {
+    display: none;
+  } 
+
+  #parallax-img-small{
+        transform: scale(.9,.9);
+        margin-left: -55%;
+        margin-top: -20%;
+    }
+
+  .scene li div{
+        background-repeat: no-repeat;
+        position: relative;
+        /*border: 1px dashed black;*/
+    }
+
+  #lay1 {
+    left: 38px;
+    top: 29px;
+    width: 845px;
+    height: 840px;
+    background: url("../images/parallax_sm/ebene-1.png");
+    }
+
+    #lay2 {
+    left: 200px;
+    top: 244px;
+    width: 572px;
+    height: 532px;
+    background: url("../images/parallax_sm/ebene-2.png");
+    }
+
+
+     #blend-lay3-small {
+        mix-blend-mode: multiply;
+    }
+
+    #lay3 {
+    left: 293px;
+    top: 261px;
+    width: 350px;
+    height: 326px;
+    background: url("../images/parallax_sm/ebene-3.png");
+    }
+
+    #lay4 {
+    left: 279px;
+    top: 294px;
+    width: 373px;
+    height: 314px;
+    background: url("../images/parallax_sm/ebene-4.png");
+    }
+
+    #lay11 {
+    opacity: .1;
+    width: 680px;
+    height: 541px;
+    background: url("../images/parallax_sm/color-lay.png");
+    background-repeat: no-repeat;
+    }
+
+    #lay1p {
+        left: 174px;
+        top: 547px;
+        mix-blend-mode: multiply;
+    }
+    #lay2p {
+        left: 140px;
+        top: 502px;
+        mix-blend-mode: multiply;
+    }
+    #lay3p {
+        left: 131px;
+        top: 466px;
+        mix-blend-mode: multiply;
+    }
+
+}
