@@ -503,6 +503,7 @@ z-index: 100;
   .nav > li {
     box-sizing: border-box;
    }
+  
 
   #brand-logo{
     display: none;
@@ -517,7 +518,7 @@ z-index: 100;
   background-image: url("../assets/Brand.svg");
   background-repeat: no-repeat;
   margin-bottom: 100px;
-  z-index: 20;
+  z-index: 120;
   }
 
   .nav-link-wrapper {
@@ -525,6 +526,7 @@ z-index: 100;
   width: 100px;
   left: 50px;
   margin: 10px;
+  z-index: 1000;
   }
   /*active*/
 
