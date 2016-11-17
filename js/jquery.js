@@ -181,5 +181,36 @@ $(".forward-arrow").on("click", function () {
     $(".number").html(""+currentIndex+"/"+totalItems+"");
 });
 
+// rotating layers
+
+$(document).ready(function(){
+    if ($("#parallax-img-small").css("display")=="none"){
+$(".navbar-sidebar-header").hover(function(){
+    console.log("bu");
+$("#lay1").toggleClass("lay-active1");
+$("#lay2").toggleClass("lay-active2");
+$("#lay3").toggleClass("lay-active3");
+$("#lay4").toggleClass("lay-active4");
+$("#lay5").toggleClass("lay-active5");
+$("#lay8").toggleClass("lay-active6");
+}),
+$(".nav-link-wrapper.art").hover(function(){
+$("#lay1").toggleClass("lay-active5");
+}),
+$(".nav-link-wrapper.statement").hover(function(){
+$("#lay2").toggleClass("lay-active5");
+}),
+$(".nav-link-wrapper.bio").hover(function(){
+$("#lay3").toggleClass("lay-active5");
+}),
+$(".nav-link-wrapper.blog").hover(function(){
+$("#lay4").toggleClass("lay-active5");
+}),
+$(".nav-link-wrapper.contact").hover(function(){
+$("#lay5").toggleClass("lay-active5");
+})}
+else{
+};}
+);
 
 

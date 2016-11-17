@@ -20,7 +20,8 @@ ul {
 
     #parallax-img-big{
         transform: scale(.7,.7);
-        margin-left: -20%;
+        margin-top: -5%;
+        margin-left: -15%;
     }
 
     /*image layers*/
@@ -38,6 +39,9 @@ ul {
     width: 1501px;
     height: 1178px;
     background: url("../images/parallax_lg/ebene-1.png");
+    transition-timing-function: cubic-bezier(0,1,1,0);
+    -webkit-transition: all .5s;
+    transition: all .5s ;
     }
 
     #lay2 {
@@ -47,6 +51,9 @@ ul {
     width: 1357px;
     height: 1454px;
     background: url("../images/parallax_lg/ebene-2.png");
+    transition-timing-function: cubic-bezier(0,1,1,0);
+    -webkit-transition: all .5s;
+    transition: all .5s;
     }
 
     #lay3 {
@@ -55,6 +62,8 @@ ul {
     width: 1210px;
     height: 1299px;
     background: url("../images/parallax_lg/ebene-3.png");
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
     }
 
     #lay4 {
@@ -63,6 +72,8 @@ ul {
     width: 779px;
     height: 1026px;
     background: url("../images/parallax_lg/ebene-4.png");
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
     }
 
     #lay5 {
@@ -71,6 +82,8 @@ ul {
     width: 1015px;
     height: 815px;
     background: url("../images/parallax_lg/ebene-5.png");
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
     }
 
     #lay6 {
@@ -79,6 +92,8 @@ ul {
     width: 747px;
     height: 944px;
     background: url("../images/parallax_lg/ebene-6.png");
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
     }
 
     #blend-lay7 {
@@ -103,6 +118,8 @@ ul {
     width: 622px;
     height: 579px;
     background: url("../images/parallax_lg/ebene-8.png");
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
     }
 
     #blend-lay9 {
@@ -201,6 +218,9 @@ ul {
     width: 1501px;
     height: 1178px;
     background-image: url("../images/parallax_lg/ebene-1.png");
+    transition-timing-function: cubic-bezier(0,1,1,0);
+    -webkit-transition: all .5s;
+    transition: all .5s ;
     }
 
     #lay2 {
@@ -210,6 +230,9 @@ ul {
     width: 1357px;
     height: 1454px;
     background-image: url("../images/parallax_lg/ebene-2.png");
+    transition-timing-function: cubic-bezier(0,1,1,0);
+    -webkit-transition: all .5s;
+    transition: all .5s ;
     }
 
 
@@ -220,6 +243,9 @@ ul {
     width: 1210px;
     height: 1299px;
     background-image: url("../images/parallax_lg/ebene-3.png");
+    transition-timing-function: cubic-bezier(0,1,1,0);
+    -webkit-transition: all .5s;
+    transition: all .5s ;
     }
 
     #lay4 {
@@ -228,6 +254,9 @@ ul {
     width: 779px;
     height: 1026px;
     background-image: url("../images/parallax_lg/ebene-4.png");
+    transition-timing-function: cubic-bezier(0,1,1,0);
+    -webkit-transition: all .5s;
+    transition: all .5s ;
     }
 
     #lay5 {
@@ -236,6 +265,9 @@ ul {
     width: 1015px;
     height: 815px;
     background-image: url("../images/parallax_lg/ebene-5.png");
+    transition-timing-function: cubic-bezier(0,1,1,0);
+    -webkit-transition: all .5s;
+    transition: all .5s ;
     }
 
     #lay6 {
@@ -244,6 +276,9 @@ ul {
     width: 747px;
     height: 944px;
     background-image: url("../images/parallax_lg/ebene-6.png");
+    transition-timing-function: cubic-bezier(0,1,1,0);
+    -webkit-transition: all .5s;
+    transition: all .5s ;
     }
 
     #blend-lay7 {
@@ -268,6 +303,9 @@ ul {
     width: 622px;
     height: 579px;
     background-image: url("../images/parallax_lg/ebene-8.png");
+    transition-timing-function: cubic-bezier(0,1,1,0);
+    -webkit-transition: all .5s;
+    transition: all .5s ;
     }
 
     #blend-lay9 {
