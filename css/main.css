@@ -393,7 +393,7 @@ z-index: 100;
   .nav > li {
     box-sizing: border-box;
     display: inline;
-    /*float: left;*/
+    float: left;
     box-sizing: border-box;
   }
   
