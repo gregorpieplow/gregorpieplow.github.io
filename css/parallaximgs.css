@@ -200,7 +200,7 @@ ul {
     top: 53px;
     width: 1501px;
     height: 1178px;
-    background: url("../images/parallax_lg/ebene-1.png");
+    background-image: url("../images/parallax_lg/ebene-1.png");
     }
 
     #lay2 {
@@ -209,7 +209,7 @@ ul {
     top: 90px;
     width: 1357px;
     height: 1454px;
-    background: url("../images/parallax_lg/ebene-2.png");
+    background-image: url("../images/parallax_lg/ebene-2.png");
     }
 
 
@@ -219,7 +219,7 @@ ul {
     top: 196px;
     width: 1210px;
     height: 1299px;
-    background: url("../images/parallax_lg/ebene-3.png");
+    background-image: url("../images/parallax_lg/ebene-3.png");
     }
 
     #lay4 {
@@ -227,7 +227,7 @@ ul {
     top: 199px;
     width: 779px;
     height: 1026px;
-    background: url("../images/parallax_lg/ebene-4.png");
+    background-image: url("../images/parallax_lg/ebene-4.png");
     }
 
     #lay5 {
@@ -235,7 +235,7 @@ ul {
     top: 450px;
     width: 1015px;
     height: 815px;
-    background: url("../images/parallax_lg/ebene-5.png");
+    background-image: url("../images/parallax_lg/ebene-5.png");
     }
 
     #lay6 {
@@ -243,7 +243,7 @@ ul {
     top: 434px;
     width: 747px;
     height: 944px;
-    background: url("../images/parallax_lg/ebene-6.png");
+    background-image: url("../images/parallax_lg/ebene-6.png");
     }
 
     #blend-lay7 {
@@ -255,7 +255,7 @@ ul {
     top: 833px;
     width: 107px;
     height: 58px;
-    background: url("../images/parallax_lg/ebene-7.png");
+    background-image: url("../images/parallax_lg/ebene-7.png");
     }
 
     #blend-lay8 {
@@ -267,7 +267,7 @@ ul {
     top: 464px;
     width: 622px;
     height: 579px;
-    background: url("../images/parallax_lg/ebene-8.png");
+    background-image: url("../images/parallax_lg/ebene-8.png");
     }
 
     #blend-lay9 {
@@ -280,8 +280,10 @@ ul {
     top: 746px;
     width: 146px;
     height: 134px;
-    background: url("../images/parallax_lg/ebene-9.png");
+    background-image: url("../images/parallax_lg/ebene-9.png");
     }
+
+
 
     #blend-lay10 {
         mix-blend-mode: multiply;
@@ -292,8 +294,9 @@ ul {
     top: 518px;
     width: 672px;
     height: 567px;
-    background: url("../images/parallax_lg/ebene-10.png");
+    background-image: url("../images/parallax_lg/ebene-10.png");
     }
+
 
     /*color layers*/
 
@@ -302,7 +305,7 @@ ul {
     opacity: .1;
     width: 1104px;
     height: 878px;
-    background: url("../images/parallax_lg/color-lay.png");
+    background-image: url("../images/parallax_lg/color-lay.png");
     background-repeat: no-repeat;
     }
 
