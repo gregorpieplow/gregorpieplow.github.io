@@ -393,7 +393,7 @@ z-index: 100;
   .nav > li {
     box-sizing: border-box;
     display: inline;
-    float: left;
+    /*float: left;*/
     box-sizing: border-box;
   }
   
@@ -406,6 +406,7 @@ z-index: 100;
   background-image: url("../assets/brand-logo.svg");
   background-repeat: no-repeat;
   margin: 10px;
+  z-index: 100;
   }
 
   .nav-link-wrapper {
