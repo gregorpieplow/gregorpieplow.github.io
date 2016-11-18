@@ -19,7 +19,7 @@ ul {
   } 
 
     #parallax-img-big{
-        transform: scale(.7,.7);
+        transform: scale(.6,.6);
         margin-top: -5%;
         margin-left: -15%;
     }
