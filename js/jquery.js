@@ -86,6 +86,12 @@ $(window).resize(markactive);
 ;
 };    
 
+$(document).ready(
+$(".nav-link-wrapper").hover(function(){
+    $(this).find("img").toggleClass("nav-transform");
+})
+);
+
 // responsive navbar 
 /*
 $(document).ready(scribbleresize);
@@ -191,6 +197,18 @@ $("#lay2").toggleClass("lay-active2");
 $("#lay3").toggleClass("lay-active3");
 $("#lay4").toggleClass("lay-active4");
 $("#lay5").toggleClass("lay-active5");
+$("#lay8").toggleClass("lay-active6");
+}),
+$(".social.facebook").hover(function(){
+$("#lay9").toggleClass("lay-active7");
+$("#lay8").toggleClass("lay-active6");
+}),
+$(".social.twitter").hover(function(){
+$("#lay9").toggleClass("lay-active8");
+$("#lay8").toggleClass("lay-active6");
+}),
+$(".social.instagram").hover(function(){
+$("#lay9").toggleClass("lay-active9");
 $("#lay8").toggleClass("lay-active6");
 }),
 $(".nav-link-wrapper.art").hover(function(){

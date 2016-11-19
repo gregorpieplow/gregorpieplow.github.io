@@ -506,6 +506,7 @@ z-index: 100;
   .nav-link-wrapper.bio {
   width: 60px;
   }
+
   .nav-link-wrapper.bio:hover .path{
    stroke-dasharray: 1773;
    stroke-dashoffset: 1773;
@@ -544,6 +545,16 @@ z-index: 100;
 
   .nav img{
     position: absolute;
+    }
+
+    .nav-link-wrapper img{
+   transition-timing-function: cubic-bezier(0,1,1,0);
+  -webkit-transition: all .2s;
+   transition: all .2s ;
+  }
+
+   .nav-transform{
+     transform: translate(5px,5px);
     }
 }
 
@@ -609,6 +620,9 @@ z-index: 100;
   /*art*/
   .nav-link-wrapper.art {
       height: 100px;
+       transition-timing-function: cubic-bezier(0,1,1,0);
+  -webkit-transition: all .5s;
+   transition: all .5s ;
     }
   .nav-link-wrapper.art:hover .path{
    stroke-dasharray: 5749;
@@ -622,6 +636,9 @@ z-index: 100;
   /*statement*/
   .nav-link-wrapper.statement {
   height: 50px;
+   transition-timing-function: cubic-bezier(0,1,1,0);
+  -webkit-transition: all .5s;
+   transition: all .5s ;
   }
   .nav-link-wrapper.statement:hover .path{
    stroke-dasharray: 2123;
@@ -636,6 +653,7 @@ z-index: 100;
   .nav-link-wrapper.bio {
   height: 100px;
   }
+
   .nav-link-wrapper.bio:hover .path{
    stroke-dasharray: 1773;
    stroke-dashoffset: 1773;
@@ -648,6 +666,9 @@ z-index: 100;
   /*blog*/
   .nav-link-wrapper.blog {
    height: 70px;
+    transition-timing-function: cubic-bezier(0,1,1,0);
+  -webkit-transition: all .5s;
+   transition: all .5s ;
    }
     .nav-link-wrapper.blog:hover .path{
    stroke-dasharray: 2725;
@@ -661,6 +682,9 @@ z-index: 100;
   /*contact*/
     .nav-link-wrapper.contact {
     height: 70px;
+     transition-timing-function: cubic-bezier(0,1,1,0);
+  -webkit-transition: all .5s;
+   transition: all .5s ;
     }
     .nav-link-wrapper.contact:hover .path{
    stroke-dasharray: 2716;
@@ -671,6 +695,16 @@ z-index: 100;
    transform: scale(.7,.7);
    display: block;
   }
+
+  .nav-link-wrapper img{
+   transition-timing-function: cubic-bezier(0,1,1,0);
+  -webkit-transition: all .2s;
+   transition: all .2s ;
+  }
+
+   .nav-transform{
+     transform: translate(5px,-5px);
+    }
   
 }
 
@@ -836,6 +870,16 @@ z-index: 100;
 
 .lay-active6 {
  -webkit-transform: rotate(7deg);
+}
+
+.lay-active7 {
+ -webkit-transform: rotate(-70deg);
+}
+.lay-active8 {
+ -webkit-transform: rotate(-80deg);
+}
+.lay-active9 {
+ -webkit-transform: rotate(-90deg);
 }
 
 

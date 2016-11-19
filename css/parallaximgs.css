@@ -133,6 +133,8 @@ ul {
     width: 146px;
     height: 134px;
     background: url("../images/parallax_lg/ebene-9.png");
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
     }
 
     #blend-lay10 {
@@ -318,7 +320,9 @@ ul {
     top: 746px;
     width: 146px;
     height: 134px;
-    background-image: url("../images/parallax_lg/ebene-9.png");
+    background: url("../images/parallax_lg/ebene-9.png");
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
     }
 
 
