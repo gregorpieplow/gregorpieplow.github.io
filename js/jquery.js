@@ -186,7 +186,6 @@ $(".forward-arrow").on("click", function () {
 $(document).ready(function(){
     if ($("#parallax-img-small").css("display")=="none"){
 $(".navbar-sidebar-header").hover(function(){
-    console.log("bu");
 $("#lay1").toggleClass("lay-active1");
 $("#lay2").toggleClass("lay-active2");
 $("#lay3").toggleClass("lay-active3");
