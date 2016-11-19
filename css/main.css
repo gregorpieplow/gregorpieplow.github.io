@@ -64,11 +64,11 @@ nav li a:hover {
 @media (max-width: 576px){
 
   .social-media{
-  position: relative;
+  position: absolute;
   height: 25px;
   width: 125px;
-  margin-top: 200%;
   left: 80%;
+  top: 150%;
 }
 
 .social{
@@ -246,11 +246,11 @@ z-index: 100;
    
    
 .social-media{
-  position: relative;
+  position: absolute;
   height: 70px;
   width: 330px;
-  margin-top: 100%;
   left: 80%;
+  top: 150%;
 }
 
 .social{
@@ -423,11 +423,11 @@ z-index: 100;
 @media(min-width: 768px) and (max-width: 992px){
 
    .social-media{
-  position: relative;
+  position: absolute;
   height: 25px;
   width: 125px;
-  margin-top: 50%;
-  left: 100%;
+  left: 80%;
+  top: 150%;
 }
 
 .social{
@@ -554,11 +554,11 @@ z-index: 100;
 /*social media*/
 
   .social-media{
-  position: relative;
+  position: absolute;
   height: 70px;
   width: 330px;
-  margin-top: 250%;
-  margin-left: -10%;
+  left: 80%;
+  top: 125%;
 }
 
 .social{
