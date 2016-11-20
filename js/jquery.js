@@ -159,7 +159,7 @@ $(".closer").click(function () {
    $(".item").removeClass("active");
 });
 
-$(".thumbnail").click(function(){
+$(".thumbnail-gal").click(function(){
     $(".overlay").show(0);
     $(".gallery").hide(0);
     $("#carousel-"+this.id).addClass("active");

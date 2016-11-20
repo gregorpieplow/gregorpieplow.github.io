@@ -6,9 +6,7 @@
 
 /*bootstrap changes*/
 
-.thumbnail {
-  border: hidden;
-}
+
 
 nav li a:hover {
   background: none; 
@@ -710,7 +708,19 @@ z-index: 100;
 
 /*art page styling*/
 
+.image{
+  position: relative;
+  left: 0px;
+  width: 370px;
+  height: 500px;
+  /*background: yellow;*/
+  margin: none;
+  margin-bottom: 40px;
+  border: 1px solid black;
+}
+
 .gallery img{
+  margin: 10px;
   border: 1px solid black;
 }
 
@@ -910,3 +920,21 @@ z-index: 100;
    background-image: url("../assets/instagram.svg");
 }
 
+.row1{
+  margin: none;
+  padding: none;
+  /*background: red;*/
+}
+
+
+/*front page styling */
+
+.rect {
+  position: absolute;
+  width: 63%;
+  height: 112%;
+  top: 25%;
+  left: 15%;
+  z-index: -10;
+  border: .5px solid black;
+}
