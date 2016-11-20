@@ -176,14 +176,14 @@ $(".carousel").carousel({
 $(".back-arrow").on("click", function () {
     var currentIndex = $(".item.active").index()+1;
     var totalItems = $(".item").length;
-    currentIndex = (currentIndex+7)%9+1 ;
+    currentIndex = (currentIndex+totalItems-2)%totalItems+1 ;
     $(".number").html(""+currentIndex+"/"+totalItems+"");
 });
 
 $(".forward-arrow").on("click", function () {
     var currentIndex = $(".item.active").index()+1;
     var totalItems = $(".item").length;
-    currentIndex = currentIndex%9+1;
+    currentIndex = currentIndex%totalItems+1;
     $(".number").html(""+currentIndex+"/"+totalItems+"");
 });
 

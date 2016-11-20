@@ -710,6 +710,10 @@ z-index: 100;
 
 /*art page styling*/
 
+.gallery img{
+  border: 1px solid black;
+}
+
 
 .overlay {
   position: absolute;
@@ -811,11 +815,19 @@ z-index: 100;
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .gallery{
   position: relative;
-  top: 100px;
+  top: 200px;
   left: 100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .gallery{
+  position: relative;
+  top: 20px;
+  left: 0px;
   }
 }
 
