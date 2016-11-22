@@ -198,6 +198,7 @@ $("#lay3").toggleClass("lay-active3");
 $("#lay4").toggleClass("lay-active4");
 $("#lay5").toggleClass("lay-active5");
 $("#lay8").toggleClass("lay-active6");
+$("#lay9").toggleClass("eye-animation");
 }),
 $(".social.facebook").hover(function(){
 $("#lay9").toggleClass("lay-active7");
