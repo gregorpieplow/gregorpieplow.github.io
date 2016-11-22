@@ -870,12 +870,13 @@ z-index: 100;
   }
 }
 
+
 .lay-active1 {
-  -webkit-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg) scale(1.1,1.1);
 }
 
 .lay-active2 {
- -webkit-transform: rotate(10deg);
+ -webkit-transform: rotate(10deg) scale(1.1,1.1);
 }
 
 .lay-active3 {
