@@ -86,6 +86,8 @@ $(window).resize(markactive);
 ;
 };    
 
+// this pushes the nav items a little
+
 $(document).ready(
 $(".nav-link-wrapper").hover(function(){
     $(this).find("img").toggleClass("nav-transform");

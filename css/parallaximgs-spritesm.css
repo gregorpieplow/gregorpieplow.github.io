@@ -19,9 +19,9 @@ ul {
   } 
 
     #parallax-img-big{
-        transform: scale(.59,.59);
-        margin-left: -350px;
-        margin-top: -140px;
+        transform: scale(.6,.6);
+        margin-top: -5%;
+        margin-left: -15%;
     }
 
     /*image layers*/
@@ -400,48 +400,53 @@ ul {
         /*border: 1px dashed black;*/
     }
 
-  #lay1 {
+   .sprite {
+    background-image: url("../images/parallax_sm/spritesheet.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+  .sprite-ebene-1 {
     left: 38px;
     top: 29px;
     width: 845px;
     height: 840px;
-    background: url("../images/parallax_sm/ebene-1.png");
+    background-position: -680px 0;
     }
 
-    #lay2 {
+    .sprite-ebene-2 {
     left: 200px;
     top: 244px;
     width: 572px;
     height: 532px;
-    background: url("../images/parallax_sm/ebene-2.png");
+    background-position: -1525px 0;
     }
 
      #blend-lay3-small {
         mix-blend-mode: multiply;
     }
 
-    #lay3 {
+    .sprite-ebene-3 {
     left: 293px;
     top: 261px;
     width: 350px;
     height: 326px;
-    background: url("../images/parallax_sm/ebene-3.png");
+    background-position: -1525px -532px;
     }
 
-    #lay4 {
+    .sprite-ebene-4 {
     left: 279px;
     top: 294px;
     width: 373px;
     height: 314px;
-    background: url("../images/parallax_sm/ebene-4.png");
+    background-position: 0 -858px;
     }
 
-    #lay11 {
+    .sprite-color-lay {
     opacity: .1;
     width: 680px;
-    height: 541px;
-    background: url("../images/parallax_sm/color-lay.png");
-    background-repeat: no-repeat;
+    height: 540px;
+    background-position: 0 0;
     }
 
     #lay1p {
@@ -481,49 +486,53 @@ ul {
         /*border: 1px dashed black;*/
     }
 
-  #lay1 {
+    .sprite {
+    background-image: url("../images/parallax_sm/spritesheet.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+  .sprite-ebene-1 {
     left: 38px;
     top: 29px;
     width: 845px;
     height: 840px;
-    background: url("../images/parallax_sm/ebene-1.png");
+    background-position: -680px 0;
     }
 
-    #lay2 {
+    .sprite-ebene-2 {
     left: 200px;
     top: 244px;
     width: 572px;
     height: 532px;
-    background: url("../images/parallax_sm/ebene-2.png");
+    background-position: -1525px 0;
     }
-
 
      #blend-lay3-small {
         mix-blend-mode: multiply;
     }
 
-    #lay3 {
+    .sprite-ebene-3 {
     left: 293px;
     top: 261px;
     width: 350px;
     height: 326px;
-    background: url("../images/parallax_sm/ebene-3.png");
+    background-position: -1525px -532px;
     }
 
-    #lay4 {
+    .sprite-ebene-4 {
     left: 279px;
     top: 294px;
     width: 373px;
     height: 314px;
-    background: url("../images/parallax_sm/ebene-4.png");
+    background-position: 0 -858px;
     }
 
-    #lay11 {
+    .sprite-color-lay {
     opacity: .1;
     width: 680px;
-    height: 541px;
-    background: url("../images/parallax_sm/color-lay.png");
-    background-repeat: no-repeat;
+    height: 540px;
+    background-position: 0 0;
     }
 
     #lay1p {
@@ -543,3 +552,5 @@ ul {
     }
 
 }
+
+

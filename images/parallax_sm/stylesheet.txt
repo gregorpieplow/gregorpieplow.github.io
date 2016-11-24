@@ -1,0 +1,35 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-color-lay {
+    width: 680px;
+    height: 540px;
+    background-position: 0 0;
+}
+
+.sprite-ebene-1 {
+    width: 845px;
+    height: 840px;
+    background-position: -680px 0;
+}
+
+.sprite-ebene-2 {
+    width: 572px;
+    height: 532px;
+    background-position: -1525px 0;
+}
+
+.sprite-ebene-3 {
+    width: 350px;
+    height: 326px;
+    background-position: -1525px -532px;
+}
+
+.sprite-ebene-4 {
+    width: 373px;
+    height: 314px;
+    background-position: 0 -858px;
+}
