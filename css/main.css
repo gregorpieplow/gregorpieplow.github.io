@@ -562,22 +562,22 @@ z-index: 100;
 
 /*social media*/
 
-  .social-media{
+  /*.social-media{
   position: absolute;
   height: 70px;
   width: 330px;
   left: 80%;
   top: 950px;
-}
+}*/
 
-.social{
+/*.social{
   position: relative;
   float: left;
   width: 30px;
   height: 30px;
   background-size: cover;
   margin: 7px;
-}
+}*/
 
   #small-nav{
     display: none;
