@@ -711,18 +711,39 @@ z-index: 100;
 
 .image{
   position: relative;
+  float: left;
   left: 0px;
-  width: 370px;
-  height: 500px;
   /*background: yellow;*/
   margin: none;
   margin-bottom: 40px;
+  margin-right: 40px; 
+}
+
+.img{
+  position: relative;
+  height: 350px;
+  width: 262px;
   border: 1px solid black;
 }
 
-.gallery img{
-  margin: 10px;
-  border: 1px solid black;
+
+/*thumbnails*/
+
+.thumb1{
+  background: url("../images/art/thumb/1.jpg");
+   background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.thumb2{
+  background: url("../images/art/thumb/2.jpg");
+   background-repeat: no-repeat;
+  background-size: cover;
+}
+.thumb3{
+  background: url("../images/art/thumb/3.jpg");
+   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
@@ -829,8 +850,8 @@ z-index: 100;
 @media (min-width: 992px) {
   .gallery{
   position: relative;
-  top: 200px;
-  left: 100px;
+  top: 50px;
+  left: 10px;
   }
 }
 
