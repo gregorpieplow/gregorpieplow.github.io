@@ -4,9 +4,8 @@
   box-sizing: border-box;
 }
 
+
 /*bootstrap changes*/
-
-
 
 nav li a:hover {
   background: none; 
@@ -61,7 +60,7 @@ nav li a:hover {
 
 @media (max-width: 576px){
 
-  .social-media{
+  /*.social-media{
   position: absolute;
   height: 25px;
   width: 125px;
@@ -76,7 +75,7 @@ nav li a:hover {
   height: 25px;
   background-size: cover;
   margin: 7px;
-}
+}*/
 
 #small-nav{
 z-index: 100;
@@ -243,7 +242,7 @@ z-index: 100;
 @media (min-width: 576px) and (max-width: 768px){
    
    
-.social-media{
+/*.social-media{
   position: absolute;
   height: 70px;
   width: 330px;
@@ -258,7 +257,7 @@ z-index: 100;
   height: 25px;
   background-size: cover;
   margin: 7px;
-}
+}*/
 
    #small-nav{
 z-index: 100;
@@ -420,7 +419,7 @@ z-index: 100;
 
 @media(min-width: 768px) and (max-width: 992px){
 
-   .social-media{
+   /*.social-media{
   position: absolute;
   height: 25px;
   width: 125px;
@@ -435,7 +434,7 @@ z-index: 100;
   height: 25px;
   background-size: cover;
   margin: 7px;
-}
+}*/
 
   #small-nav{
     display: none;
@@ -709,23 +708,25 @@ z-index: 100;
 
 /*art page styling*/
 
-.image{
-  position: relative;
-  float: left;
-  left: 0px;
-  /*background: yellow;*/
-  margin: none;
-  margin-bottom: 40px;
-  margin-right: 40px; 
-}
 
-.img{
-  position: relative;
-  height: 350px;
-  width: 262px;
-  border: 1px solid black;
-}
 
+    .image{
+      position: relative;
+      float: left;
+      left: 0px;
+      /*background: yellow;*/
+      margin: none;
+      margin-bottom: 40px;
+      margin-right: 40px; 
+    }
+
+    .img{
+      position: relative;
+      height: 350px;
+      width: 262px;
+      border: 1px solid black;
+    }
+ 
 
 /*thumbnails*/
 
@@ -851,7 +852,7 @@ z-index: 100;
   .gallery{
   position: relative;
   top: 50px;
-  left: 10px;
+  left: 40px;
   }
 }
 
@@ -859,7 +860,7 @@ z-index: 100;
   .gallery{
   position: relative;
   top: 20px;
-  left: 0px;
+  left: 20px;
   }
 }
 
