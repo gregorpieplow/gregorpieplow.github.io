@@ -38,7 +38,7 @@ ul {
     top: 1180px;
     width: 380px;
     height:154px;
-    background: url("../assets/brand.svg");
+    background: url("../assets/Brand.svg");
     background-size: cover;
     transition-timing-function: cubic-bezier(0,1,1,0);
     -webkit-transition: all .5s;
