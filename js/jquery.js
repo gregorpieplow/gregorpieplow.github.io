@@ -148,10 +148,10 @@ function scribbleresize() {
 
 //small navbar
 
-$(".test-menu").click(function() {
-    $(".test li").toggle();
-}
-);
+// $(".test-menu").click(function() {
+//     $(".test li").toggle();
+// }
+// );
 
 /*carousel stuff*/
 
@@ -159,6 +159,7 @@ $(".closer").click(function () {
    $(".overlay").hide(); 
    $(".gallery").show();
    $(".item").removeClass("active");
+   $(".image-car").removeClass("zoom");
 });
 
 $(".thumbnail-gal").click(function(){
@@ -180,6 +181,7 @@ $(".back-arrow").on("click", function () {
     var totalItems = $(".item").length;
     currentIndex = (currentIndex+totalItems-2)%totalItems+1 ;
     $(".number").html(""+currentIndex+"/"+totalItems+"");
+    $(".image-car").removeClass("zoom");
 });
 
 $(".forward-arrow").on("click", function () {
@@ -187,7 +189,20 @@ $(".forward-arrow").on("click", function () {
     var totalItems = $(".item").length;
     currentIndex = currentIndex%totalItems+1;
     $(".number").html(""+currentIndex+"/"+totalItems+"");
+    $(".image-car").removeClass("zoom");
 });
+
+$("#myCarousel").ready(function() {
+$(".image-car").click(function(){
+$(".image-car").toggleClass("zoom");
+});
+$(".info").click(function(){
+$(".info-shift").toggleClass("info-shift-toggle");
+});
+}
+);
+
+
 
 // rotating layers
 

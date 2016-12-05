@@ -237,6 +237,7 @@ z-index: 100;
  
 }
 
+
 /*small screen*/
 
 @media (min-width: 576px) and (max-width: 768px){
@@ -770,78 +771,200 @@ z-index: 100;
   display: none;
   width: 100%;
   height: 100%;
-  background: white;
+  background-color: white;
   background-repeat: repeat;
   z-index: 1000 ;
   padding-top: 30px;
   padding-left: 30px;
 }
 
-.carousel-wrapper img {
-  border: 1px solid black;
+/*carousel images styling*/
+
+
+.car-size{
+  height: 100%;
+  width: 100%;
+  overflow: visible;
 }
 
-.carousel-top-nav {
+.car-size2{
+  height: 100%;
+  width: 90%;
+}
+
+.item{
   position: relative;
-  /*background: #4286f4;*/
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.image-car{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 10%;
+  z-index: 101;
+  cursor: -moz-zoom-in; 
+  cursor: -webkit-zoom-in; 
+  cursor: zoom-in;
+}
+
+.zoom{
+  position: relative;
+  width: 250%;
+  height: 250%;
+  cursor: -moz-zoom-out; 
+  cursor: -webkit-zoom-out; 
+  cursor: zoom-out;
+}
+
+
+.closertop{
+  position: fixed;
+  display: block;
+  height: 100%;
+  width: 10%;
+  z-index: 110;
+}
+
+.info-shift{
+  position: relative;
+  display: block;
+  height: 100px;
+  width: 400px;
+  margin-top: -100px;
+  left: 10%;
+  z-index: 130;
+  transition: .25s;
+}
+
+.info-shift-toggle{
+  margin-top: 0px;
+}
+
+@media (min-width: 1199px) {
+  .car-whitespace{
+  position: relative;
+  width: 100%;
+  height: 80%;
+}
+  .closertop{
+    height: 100%;
+    width: 10%;
+  }
+
+}
+
+@media (max-width: 1199px) {
+  .car-whitespace{
+    display: none;
+}
+  .closertop{
+    height: 5%;
+    width: 100%;
+  }
+
+}
+
+
+#carousel-item-1-pic {
+  background: url("../images/art/lg/1.jpg"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+#carousel-item-2-pic {
+  background: url("../images/art/lg/2.jpg"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+#carousel-item-3-pic {
+  background: url("../images/art/lg/3.jpg"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+#carousel-item-4-pic {
+  background: url("../images/art/lg/4.jpg"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+#carousel-item-5-pic {
+  background: url("../images/art/lg/5.jpg"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+#carousel-item-6-pic {
+  background: url("../images/art/lg/6.jpg"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+
+/*.carousel-top-nav {
+  position: relative;
   height: 35px;
-}
+}*/
 
-.carousel-wrapper {
-  /*background: #f48942;*/
+/*.back-arrow-wrapper {
   height: 700px;
-}
-
-.back-arrow-wrapper {
-  /*background: #f4c242;*/
-  height: 700px;
-}
+}*/
 
 .back-arrow-link{
   position: relative;
   top: 50%;
   left: 20px;
-  height: 35px;
-  width: 35px;
+  height: 25px;
+  width: 25px;
 }
 .back-arrow-link.sm{
   position: relative;
-  height: 35px;
-  width: 35px;
+  display: inline;
+  height: 25px;
+  width: 25px;
+  z-index: 100;
 }
 
 .back-arrow{
   position: relative;
-  height: 35px;
-  width: 35px;
+  height: 25px;
+  width: 25px;
   background-image: url("../assets/back.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.forward-arrow-wrapper {
-  /*background: #f4c242;*/
+/*.forward-arrow-wrapper {
   height: 700px;
-}
+}*/
 
 .forward-arrow-link{
   position: relative;
   left: 20px;
   top: 50%;
-  height: 35px;
-  width: 35px;
+  height: 25px;
+  width: 25px;
 }
 
 .forward-arrow-link.sm{
   position: relative;
-  height: 35px;
-  width: 35px;
+  display: inline;
+  margin-left: 30px;
+  height: 25px;
+  width: 25px;
+  z-index: 100;
 }
 
 .forward-arrow{
   position: relative;
-  height: 35px;
-  width: 35px;
+  height: 25px;
+  width: 25px;
   background-image: url("../assets/next.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -850,10 +973,22 @@ z-index: 100;
 .closer{
   position: relative;
   opacity: .5;
-  height: 35px;
-  width: 35px;
+  height: 25px;
+  width: 25px;
   background-image: url("../assets/closer.svg");
   background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.info{
+  position: relative;
+  opacity: .5;
+  height: 30px;
+  width: 30px;
+  margin-top: 30px;
+  margin-left: -2px;
+  background-image: url("../assets/info.svg");
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
