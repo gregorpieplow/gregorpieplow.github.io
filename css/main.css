@@ -820,6 +820,15 @@ z-index: 100;
   cursor: zoom-out;
 }
 
+.info-zoom{
+  position: relative;
+  width: 450%;
+  height: 450%;
+  cursor: -moz-zoom-out; 
+  cursor: -webkit-zoom-out; 
+  cursor: zoom-out;
+}
+
 
 .closertop{
   position: fixed;
