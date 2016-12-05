@@ -160,6 +160,7 @@ $(".closer").click(function () {
    $(".gallery").show();
    $(".item").removeClass("active");
    $(".image-car").removeClass("zoom");
+   $(".info-shift").removeClass("info-shift-toggle");
 });
 
 $(".thumbnail-gal").click(function(){
@@ -198,6 +199,7 @@ $(".image-car").toggleClass("zoom");
 });
 $(".info").click(function(){
 $(".info-shift").toggleClass("info-shift-toggle");
+$(".image-car").toggleClass("image-shift-toggle");
 });
 }
 );
