@@ -194,12 +194,26 @@ $(".forward-arrow").on("click", function () {
 });
 
 $("#myCarousel").ready(function() {
-$(".image-car").click(function(){
-$(".image-car").toggleClass("zoom");
-});
 $(".info").click(function(){
+if ($(".image-car").hasClass("zoom")){
+$(".info-shift").toggleClass("info-shift-toggle");
+}else
+{
 $(".info-shift").toggleClass("info-shift-toggle");
 $(".image-car").toggleClass("image-shift-toggle");
+}
+});
+$(".image-car").click(function(){
+if ($(".info-shift").hasClass("info-shift-toggle")){
+$(".image-car").removeClass("image-shift-toggle");
+$(".info-shift").removeClass("info-shift-toggle");
+$(".image-car").toggleClass("zoom");
+$(".info-shift").addClass("info-shift-toggle");
+}else{
+$(".image-car").removeClass("image-shift-toggle");
+$(".info-shift").removeClass("info-shift-toggle");
+$(".image-car").toggleClass("zoom");
+}
 });
 }
 );
