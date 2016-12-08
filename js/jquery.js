@@ -23,17 +23,16 @@ $(function () {
   });
 //small screen navbar slide menu
 
-$(document).ready(function() {
   var $toggleButton = $('.menu-button');
   $toggleButton.on('click', function() {
     $(this).toggleClass('button-open');
   });
-});
+
 
 
 //small nav menu button functionality
 
-$(document).ready(function() {
+
     var $toggleButton = $('.menu-button'),
         $menuWrap = $('.menu-wrap'),
         $menuButton = $('.navbar-sidebar-header-menu');
@@ -46,7 +45,7 @@ $(document).ready(function() {
             $menuButton.addClass("active");
         };        
     });
-});
+
 
 $(document).on("scroll", function () {
     var $menuButton = $('.navbar-sidebar-header-menu');
@@ -88,11 +87,10 @@ $(window).resize(markactive);
 
 // this pushes the nav items a little
 
-$(document).ready(
 $(".nav-link-wrapper").hover(function(){
     $(this).find("img").toggleClass("nav-transform");
 })
-);
+
 
 // responsive navbar 
 /*
@@ -168,6 +166,7 @@ $(".thumbnail-gal").click(function(){
     $(".gallery").hide(0);
     $("#carousel-"+this.id).addClass("active");
     $("#list-"+this.id).addClass("active");
+    divCarSize();
     var currentIndex = $(".item.active").index()+1;
     var totalItems = $(".item").length;
     $(".number").html(""+currentIndex+"/"+totalItems+"");
@@ -191,39 +190,67 @@ $(".forward-arrow").on("click", function () {
     currentIndex = currentIndex%totalItems+1;
     $(".number").html(""+currentIndex+"/"+totalItems+"");
     $(".image-car").removeClass("zoom");
+    $(".item.active").next();
 });
 
-$("#myCarousel").ready(function() {
+
 $(".info").click(function(){
 if ($(".image-car").hasClass("zoom")){
 $(".info-shift").toggleClass("info-shift-toggle");
 }else
 {
 $(".info-shift").toggleClass("info-shift-toggle");
-$(".image-car").toggleClass("image-shift-toggle");
 }
 });
+
 $(".image-car").click(function(){
-if ($(".info-shift").hasClass("info-shift-toggle")){
-$(".image-car").removeClass("image-shift-toggle");
-$(".info-shift").removeClass("info-shift-toggle");
-$(".image-car").toggleClass("zoom");
-$(".info-shift").addClass("info-shift-toggle");
+    if ($(".info-shift").hasClass("info-shift-toggle")){
+    $(".info-shift").removeClass("info-shift-toggle");
+    $(".image-car").toggleClass("zoom");
+    $(".info-shift").addClass("info-shift-toggle");
 }else{
-$(".image-car").removeClass("image-shift-toggle");
-$(".info-shift").removeClass("info-shift-toggle");
-$(".image-car").toggleClass("zoom");
+    $(".info-shift").removeClass("info-shift-toggle");
+    $(".image-car").toggleClass("zoom");    
 }
 });
+
+
+function divCarSize() {
+    $(".image-car").each(function(i){
+    
+    var image_url = $(this).css('background-image'),
+    image;
+
+// Remove url() or in case of Chrome url("")
+image_url = image_url.match(/^url\("?(.+?)"?\)$/);
+
+if (image_url[1]) {
+    image_url = image_url[1];
+    image = new Image();
+
+    // just in case it is not already loaded
+    $(image).load(function () {
+        var h = image.height;
+        var w = image.width;
+        var ratio =  w / h;
+        var activeDivHeight =  window.innerHeight*.9;
+        var activeDivWidth = activeDivHeight * ratio; 
+         $("#pic-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
+        console.log($("pic-"+(i+1)).css("height"))
+        });   
+    image.src = image_url;
+    };
+    }
+)
 }
-);
+
 
 
 
 // rotating layers
 
-$(document).ready(function(){
-    if ($("#parallax-img-small").css("display")=="none"){
+
+if ($("#parallax-img-small").css("display")=="none"){
 $(".navbar-sidebar-header").hover(function(){
 $("#lay1").toggleClass("lay-active1");
 $("#lay2").toggleClass("lay-active2");
@@ -260,8 +287,19 @@ $("#lay4").toggleClass("lay-active5");
 $(".nav-link-wrapper.contact").hover(function(){
 $("#lay5").toggleClass("lay-active5");
 })}
-else{
-};}
-);
+;
+
+
+// $(document).ready(function(){
+//     $(document).mousemove(function(e) {
+//     var percentx = e.clientY / $(window).height();
+//     var percenty = e.clientX / $(window).width();
+//     $('body, html').scrollTop($(document).height() * percentx);
+//     $('body, html').scrollLeft($(document).width() * percenty);
+// });
+// }
+// );
+
+
 
 
