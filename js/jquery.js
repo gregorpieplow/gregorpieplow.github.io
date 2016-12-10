@@ -203,16 +203,7 @@ $(".info-shift").toggleClass("info-shift-toggle");
 }
 });
 
-$(".image-car").click(function(){
-    if ($(".info-shift").hasClass("info-shift-toggle")){
-    $(".info-shift").removeClass("info-shift-toggle");
-    $(".image-car").toggleClass("zoom");
-    $(".info-shift").addClass("info-shift-toggle");
-}else{
-    $(".info-shift").removeClass("info-shift-toggle");
-    $(".image-car").toggleClass("zoom");    
-}
-});
+
 
 
 function divCarSize() {
@@ -236,7 +227,6 @@ if (image_url[1]) {
         var activeDivHeight =  window.innerHeight*.9;
         var activeDivWidth = activeDivHeight * ratio; 
          $("#pic-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
-        console.log($("pic-"+(i+1)).css("height"))
         });   
     image.src = image_url;
     };
@@ -244,6 +234,39 @@ if (image_url[1]) {
 )
 }
 
+
+// here I detect weather i long or short click on an image
+
+$(function() { 
+
+    // how many milliseconds is a long press?
+    var longpress = 200;
+    // holds the start time
+    var start;
+
+    $( ".image-car" ).on( 'mousedown', function( e ) {
+        start = new Date().getTime();
+    } );
+
+    $( ".image-car" ).on( 'mouseleave', function( e ) {
+        start = 0;
+    } );
+
+    $( ".image-car" ).on( 'mouseup', function( e ) {
+        if ( new Date().getTime() >= ( start + longpress )  ) {   
+        } else {
+          if ($(".info-shift").hasClass("info-shift-toggle")){
+        $(".info-shift").removeClass("info-shift-toggle");
+        $(".image-car").toggleClass("zoom");
+        $(".info-shift").addClass("info-shift-toggle");
+        }else{
+        $(".info-shift").removeClass("info-shift-toggle");
+        $(".image-car").toggleClass("zoom");    
+        } 
+        }
+    } );
+
+});
 
 
 
@@ -288,18 +311,5 @@ $(".nav-link-wrapper.contact").hover(function(){
 $("#lay5").toggleClass("lay-active5");
 })}
 ;
-
-
-// $(document).ready(function(){
-//     $(document).mousemove(function(e) {
-//     var percentx = e.clientY / $(window).height();
-//     var percenty = e.clientX / $(window).width();
-//     $('body, html').scrollTop($(document).height() * percentx);
-//     $('body, html').scrollLeft($(document).width() * percenty);
-// });
-// }
-// );
-
-
 
 
