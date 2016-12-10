@@ -258,17 +258,19 @@ $(function() {
           if ($(".info-shift").hasClass("info-shift-toggle")){
         $(".info-shift").removeClass("info-shift-toggle");
         $(".image-car").toggleClass("zoom");
-        $(".closertop").toggleClass("closertop-shift").delay(1500).toggleClass("hidden-lg");  
-        $(".carousel-house").toggleClass("col-lg-11").toggleClass("col-lg-12");
+        $(".closertop").toggleClass("closertop-shift").delay(1500).toggleClass("hidden-xs hidden-sm hidden-md hidden-lg");  
+        $(".carousel-house").toggleClass("col-lg-11 col-md-11 col-sm-11").toggleClass("col-lg-12 col-md-12 col-sm-12");
         $(".overlay").toggleClass("overlay-zoom");
         $(".zoom-closer").toggle();
+        $(".item").toggleClass("item-marg");
         // $(".info-shift").addClass("info-shift-toggle");
         }else{
         $(".info-shift").removeClass("info-shift-toggle");
         $(".image-car").toggleClass("zoom");  
-        $(".closertop").toggleClass("closertop-shift").delay(1500).toggleClass("hidden-lg");  
-        $(".carousel-house").toggleClass("col-lg-11").toggleClass("col-lg-12");
+        $(".closertop").toggleClass("closertop-shift").delay(1500).toggleClass("hidden-xs hidden-sm hidden-md hidden-lg");  
+        $(".carousel-house").toggleClass("col-lg-11 col-md-11 col-sm-11").toggleClass("col-lg-12 col-md-12 col-sm-12");
         $(".overlay").toggleClass("overlay-zoom");
+        $(".item").toggleClass("item-marg-shift");
         $(".zoom-closer").toggle();
         } 
         }
@@ -278,9 +280,10 @@ $(function() {
 
 $(".zoom-closer").click(function(){
 $(".image-car").removeClass("zoom");  
-$(".closertop").removeClass("closertop-shift").delay(1500).removeClass("hidden-lg");  
-$(".carousel-house").removeClass("col-lg-12").addClass("col-lg-11");
+$(".closertop").removeClass("closertop-shift").delay(1500).removeClass("hidden-xs hidden-sm hidden-md hidden-lg");  
+$(".carousel-house").removeClass("col-lg-12 col-md-12 col-sm-12").addClass("col-lg-11 col-md-11 col-sm-11");
 $(".overlay").removeClass("overlay-zoom");
+$(".item").removeClass("item-marg-shift");
 $(".zoom-closer").toggle();
 });
 
