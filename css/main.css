@@ -808,8 +808,8 @@ z-index: 100;
 
 .zoom{
   position: relative;
-  height: 270%;
-  width: 270%;
+  height: 230%;
+  width: 230%;
   border: none;
   cursor: -webkit-grab;
 }
