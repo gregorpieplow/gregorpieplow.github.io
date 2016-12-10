@@ -767,16 +767,30 @@ z-index: 100;
 
 /*carousel images styling*/
 
+.zoom-closer{
+  position: fixed;
+  display: none;
+  margin-left: 30px;
+  margin-top: 15px; 
+  opacity: 1;
+  height: 25px;
+  width: 25px;
+  background-image: url("../assets/closer.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: .2s;
+  z-index: 121;
+}
 
 .car-size21{
   height: 100%;
   width: 100%;
-  overflow: visible;
+  /*overflow: visible;*/
 }
 
 .car-size2{
   height: 100%;
-  width: 90%;
+  width: 100%;
 }
 
 .image-car{
@@ -785,6 +799,7 @@ z-index: 100;
   z-index: 101;
   height: 100%;
   width: 100%;
+  border: 1px solid black;
   transition: .25s;
   cursor: -moz-zoom-in; 
   cursor: -webkit-zoom-in; 
@@ -793,11 +808,11 @@ z-index: 100;
 
 .zoom{
   position: relative;
-  height: 250%;
-  width: 250%;
+  height: 270%;
+  width: 270%;
+  border: none;
   cursor: -webkit-grab;
 }
-
 
   .closer{
   position: relative;
@@ -807,6 +822,7 @@ z-index: 100;
   background-image: url("../assets/closer.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  transition: .2s;
 }
 
 .info{
@@ -819,6 +835,7 @@ z-index: 100;
   background-image: url("../assets/info.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  transition: .2s
 }
 
 .info-shift{
@@ -850,9 +867,16 @@ z-index: 100;
   background-color: white;
   background-repeat: repeat;
   z-index: 1000 ;
-  padding-top: 30px;
+  padding-top: 10px;
   padding-left: 90px;
   padding-bottom: 30px;
+  transition: .2s
+}
+
+.overlay-zoom{
+ padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 .item{
@@ -860,12 +884,18 @@ z-index: 100;
   margin-left: 0px;
   z-index: 100;
   overflow: scroll;
+  transition: .2s;
 }
 
 .closertop{
   position: relative;
   height: 100%;
   z-index: 110;
+  transition: .5s;
+}
+
+.closertop-shift{
+  left: -100px;
 }
   .car-whitespace{
   position: relative;
@@ -906,12 +936,15 @@ z-index: 100;
   padding-top: 30px;
   padding-left: 20px;
   padding-bottom: 30px;
+   transition: .2s;
 }
 
 .item{
   position: relative;
-  margin-left: 0px;
   z-index: 100;
+  overflow: scroll;
+  margin-left: 30px;
+  transition: .2s;
 }
 
     .car-whitespace{
@@ -926,6 +959,7 @@ z-index: 100;
   height:0%;
   width: 0%;
   z-index: 110;
+  transition: .25s;
 }
 
 
@@ -955,39 +989,34 @@ z-index: 100;
 #carousel-item-1-pic {
   background: url("../images/art/lg/1.jpg"); 
   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left top;
+  background-repeat: repeat;
 }
 
 #carousel-item-2-pic {
   background: url("../images/art/lg/2.jpg"); 
   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left top;
+  background-repeat: repeat;
 }
 #carousel-item-3-pic {
   background: url("../images/art/lg/3.jpg"); 
   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left top;
+  background-repeat: repeat;
 }
 #carousel-item-4-pic {
   background: url("../images/art/lg/4.jpg"); 
   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right bottom;
+  background-repeat: repeat;
+  ba
 }
 #carousel-item-5-pic {
   background: url("../images/art/lg/5.jpg"); 
   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left top;
+  background-repeat: repeat;
 }
 #carousel-item-6-pic {
   background: url("../images/art/lg/6.jpg"); 
   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left top;
+  background-repeat: repeat;
 }
 
 

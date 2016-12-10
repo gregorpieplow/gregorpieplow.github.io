@@ -204,7 +204,7 @@ $(".info-shift").toggleClass("info-shift-toggle");
 });
 
 
-
+// setting the sizes of all the carousel divs
 
 function divCarSize() {
     $(".image-car").each(function(i){
@@ -224,7 +224,7 @@ if (image_url[1]) {
         var h = image.height;
         var w = image.width;
         var ratio =  w / h;
-        var activeDivHeight =  window.innerHeight*.9;
+        var activeDivHeight =  window.innerHeight*.97;
         var activeDivWidth = activeDivHeight * ratio; 
          $("#pic-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
         });   
@@ -258,16 +258,31 @@ $(function() {
           if ($(".info-shift").hasClass("info-shift-toggle")){
         $(".info-shift").removeClass("info-shift-toggle");
         $(".image-car").toggleClass("zoom");
-        $(".info-shift").addClass("info-shift-toggle");
+        $(".closertop").toggleClass("closertop-shift").delay(1500).toggleClass("hidden-lg");  
+        $(".carousel-house").toggleClass("col-lg-11").toggleClass("col-lg-12");
+        $(".overlay").toggleClass("overlay-zoom");
+        $(".zoom-closer").toggle();
+        // $(".info-shift").addClass("info-shift-toggle");
         }else{
         $(".info-shift").removeClass("info-shift-toggle");
-        $(".image-car").toggleClass("zoom");    
+        $(".image-car").toggleClass("zoom");  
+        $(".closertop").toggleClass("closertop-shift").delay(1500).toggleClass("hidden-lg");  
+        $(".carousel-house").toggleClass("col-lg-11").toggleClass("col-lg-12");
+        $(".overlay").toggleClass("overlay-zoom");
+        $(".zoom-closer").toggle();
         } 
         }
     } );
 
 });
 
+$(".zoom-closer").click(function(){
+$(".image-car").removeClass("zoom");  
+$(".closertop").removeClass("closertop-shift").delay(1500).removeClass("hidden-lg");  
+$(".carousel-house").removeClass("col-lg-12").addClass("col-lg-11");
+$(".overlay").removeClass("overlay-zoom");
+$(".zoom-closer").toggle();
+});
 
 
 // rotating layers
