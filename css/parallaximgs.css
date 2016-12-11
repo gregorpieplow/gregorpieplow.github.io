@@ -415,7 +415,7 @@ ul {
  #parallax-img-small{
         transform: scale(.8,.8);
         margin-left: -25%;
-        margin-top: 10%;
+        margin-top: 0%;
     }
 
 #parallax-img-big {
@@ -500,7 +500,7 @@ ul {
   #parallax-img-small{
         transform: scale(.4,.4);
         margin-left: -60%;
-        margin-top: 10%;
+        margin-top: 0%;
     }
 
   .scene li div{

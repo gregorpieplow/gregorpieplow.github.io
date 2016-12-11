@@ -176,6 +176,11 @@ $(".thumbnail-gal").click(function(){
     $(".number").html(""+currentIndex+"/"+totalItems+"");
 });
 
+$(".image").hover(function() {
+    $(this).find(".description").toggleClass("line-height-shift");
+    $(this).find(".img").toggleClass("img-shift");
+});
+
 $(".carousel").carousel({
     interval: false
 });
