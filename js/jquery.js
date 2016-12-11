@@ -228,7 +228,7 @@ if (image_url[1]) {
         var h = image.height;
         var w = image.width;
         var ratio =  w / h;
-        if (window.innerWidth >= window.innerHeight){
+        if (.6 * window.innerWidth >= window.innerHeight){
             var activeDivHeight =  window.innerHeight*.97;
             var activeDivWidth = activeDivHeight * ratio; 
             $("#pic-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
