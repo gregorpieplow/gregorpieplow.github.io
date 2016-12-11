@@ -234,7 +234,7 @@ if (image_url[1]) {
             $("#pic-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
         }
         else{
-            var activeDivWidth = window.innerWidth*.77; 
+            var activeDivWidth = window.innerWidth*.73; 
             var activeDivHeight =  activeDivWidth / ratio;
             $("#pic-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
         }
