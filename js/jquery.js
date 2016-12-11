@@ -224,9 +224,16 @@ if (image_url[1]) {
         var h = image.height;
         var w = image.width;
         var ratio =  w / h;
-        var activeDivHeight =  window.innerHeight*.97;
-        var activeDivWidth = activeDivHeight * ratio; 
-         $("#pic-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
+        if (window.innerWidth >= window.innerHeight){
+            var activeDivHeight =  window.innerHeight*.97;
+            var activeDivWidth = activeDivHeight * ratio; 
+            $("#pic-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
+        }
+        else{
+            var activeDivWidth = window.innerWidth*.77; 
+            var activeDivHeight =  activeDivWidth / ratio;
+            $("#pic-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
+        }
         });   
     image.src = image_url;
     };
@@ -259,7 +266,7 @@ $(function() {
         $(".info-shift").removeClass("info-shift-toggle");
         $(".image-car").toggleClass("zoom");
         $(".closertop").toggleClass("closertop-shift").delay(1500).toggleClass("hidden-xs hidden-sm hidden-md hidden-lg");  
-        $(".carousel-house").toggleClass("col-lg-11 col-md-11 col-sm-11").toggleClass("col-lg-12 col-md-12 col-sm-12");
+        $(".carousel-house").toggleClass("col-lg-11 col-md-11 col-sm-11").toggleClass("col-lg-12 col-md-12 col-sm-12").toggleClass("carousel-house-shift");
         $(".overlay").toggleClass("overlay-zoom");
         $(".zoom-closer").toggle();
         $(".item").toggleClass("item-marg");
@@ -268,7 +275,7 @@ $(function() {
         $(".info-shift").removeClass("info-shift-toggle");
         $(".image-car").toggleClass("zoom");  
         $(".closertop").toggleClass("closertop-shift").delay(1500).toggleClass("hidden-xs hidden-sm hidden-md hidden-lg");  
-        $(".carousel-house").toggleClass("col-lg-11 col-md-11 col-sm-11").toggleClass("col-lg-12 col-md-12 col-sm-12");
+        $(".carousel-house").toggleClass("col-lg-11 col-md-11 col-sm-11").toggleClass("col-lg-12 col-md-12 col-sm-12").toggleClass("carousel-house-shift");
         $(".overlay").toggleClass("overlay-zoom");
         $(".item").toggleClass("item-marg-shift");
         $(".zoom-closer").toggle();
@@ -281,7 +288,7 @@ $(function() {
 $(".zoom-closer").click(function(){
 $(".image-car").removeClass("zoom");  
 $(".closertop").removeClass("closertop-shift").delay(1500).removeClass("hidden-xs hidden-sm hidden-md hidden-lg");  
-$(".carousel-house").removeClass("col-lg-12 col-md-12 col-sm-12").addClass("col-lg-11 col-md-11 col-sm-11");
+$(".carousel-house").removeClass("col-lg-12 col-md-12 col-sm-12").removeClass("carousel-house-shift").addClass("col-lg-11 col-md-11 col-sm-11");
 $(".overlay").removeClass("overlay-zoom");
 $(".item").removeClass("item-marg-shift");
 $(".zoom-closer").toggle();

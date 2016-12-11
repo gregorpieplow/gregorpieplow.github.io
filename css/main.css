@@ -890,6 +890,9 @@ z-index: 100;
 .item-marg-shift{
 }
 
+.carousel-house-shift{
+}
+
 .closertop{
   position: relative;
   height: 100%;
@@ -956,8 +959,18 @@ z-index: 100;
   transition: .2s;
 }
 
+.carousel-house-shift{
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 130%;
+}
+
 .item-marg-shift{
   margin-left: 0px;
+  height: 2000px;
+  width: 100%;
+  margin-right: -300px;
 }
 
 .car-whitespace{
