@@ -85,7 +85,11 @@ $(window).resize(markactive);
 ;
 };    
 
-// this pushes the nav items a little
+// this scales the nav items a little
+
+$(".navbar-sidebar-header").hover(function(){
+    $(this).toggleClass("nav-transform");
+});
 
 $(".nav-link-wrapper").hover(function(){
     $(this).find("img").toggleClass("nav-transform");
