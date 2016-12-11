@@ -150,7 +150,9 @@ z-index: 100;
   width: 100px; 
   height: 100px;
   background-image: url("../assets/menu.svg");
+  background-size: contain;
   background-repeat: no-repeat;
+  background-size: contain;
   margin-top: 20px;
   z-index: 100;
   }
@@ -332,6 +334,7 @@ z-index: 100;
   width: 100px; 
   height: 100px;
   background-image: url("../assets/menu.svg");
+  background-size: contain;
   background-repeat: no-repeat;
   margin-top: 20px;
   z-index: 100;

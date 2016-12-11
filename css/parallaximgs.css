@@ -215,8 +215,8 @@ ul {
 
     #parallax-img-big{
         transform: scale(.5,.5);
-        margin-top: -15%;
-        margin-left: -20%;
+        margin-top: -10%;
+        margin-left: -40%;
     }
 
     /*image layers*/
@@ -415,6 +415,7 @@ ul {
  #parallax-img-small{
         transform: scale(.8,.8);
         margin-left: -25%;
+        margin-top: 10%;
     }
 
 #parallax-img-big {
@@ -498,8 +499,8 @@ ul {
 
   #parallax-img-small{
         transform: scale(.4,.4);
-        margin-left: -55%;
-        margin-top: -20%;
+        margin-left: -60%;
+        margin-top: 10%;
     }
 
   .scene li div{
