@@ -1,5 +1,12 @@
 // active nav element
 
+$image = $(".image-car");
+
+$(document).on({
+    ajaxStart: function() { $image.addClass("loading");    },
+     ajaxStop: function() { $image.removeClass("loading"); }    
+});
+
 $(function () {
     $("#art").find(".nav-link-wrapper.art").addClass("active");
     $("#art").find(".art").find("path").removeClass("path");
@@ -204,12 +211,7 @@ $(".forward-arrow").on("click", function () {
 
 
 $(".info").click(function(){
-if ($(".image-car").hasClass("zoom")){
 $(".info-shift").toggleClass("info-shift-toggle");
-}else
-{
-$(".info-shift").toggleClass("info-shift-toggle");
-}
 });
 
 
