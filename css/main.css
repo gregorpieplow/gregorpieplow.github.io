@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab:100,300');
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i');
 
 *{
   box-sizing: border-box;
@@ -722,9 +723,10 @@ z-index: 100;
       left: 0px;
       width: 350px;
       /*background: yellow;*/
-      margin-bottom: 90px;
+      margin-bottom: 50px;
     }
 
+  
     .img{
       position: relative;
       height: 350px;
@@ -732,28 +734,43 @@ z-index: 100;
       border: 1px solid black;
       transition: .4s;
     }
- 
 
  .description{
+  display: none;
   position: absolute;
-  text-orientation: vertical;
   top: 0px;
   left: 275px;
   height: 350px;
   width: 30px;
   font-family: 'Alegreya Sans SC', serif;
   font-weight: 100;
-  line-height: 40px;
-  font-size: 30pt;
+  line-height: 20px;
+  font-size: 28pt;
   z-index: 120;
   transition: .4s;
 }
 
-.line-height-shift{
-  line-height: 30px;
-  height: 500px;
 
+
+.quote{
+  font-family: 'Alegreya Sans SC', serif;
+  font-weight: 100;
+  line-height: 20px;
+  font-size: 28pt;
+  z-index: 120;
+  transition: .4s;
+  position: relative;
+  top: 10px;
+  width: 200px;
+  height: 20px;
+  z-index: 120;
+  letter-spacing: -7px;
 }
+
+.quote-shift{
+  letter-spacing: 1px;
+}
+
 
 
 /*thumbnails*/

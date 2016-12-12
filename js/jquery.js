@@ -177,7 +177,7 @@ $(".thumbnail-gal").click(function(){
 });
 
 $(".image").hover(function() {
-    $(this).find(".description").toggleClass("line-height-shift");
+    $(this).find(".quote").toggleClass("quote-shift");
 });
 
 $(".carousel").carousel({
@@ -242,7 +242,8 @@ if (image_url[1]) {
     };
     }
 )
-}
+};
+
 
 
 
