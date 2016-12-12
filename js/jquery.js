@@ -1,12 +1,3 @@
-// active nav element
-
-$image = $(".image-car");
-
-$(document).on({
-    ajaxStart: function() { $image.addClass("loading");    },
-     ajaxStop: function() { $image.removeClass("loading"); }    
-});
-
 $(function () {
     $("#art").find(".nav-link-wrapper.art").addClass("active");
     $("#art").find(".art").find("path").removeClass("path");
@@ -181,11 +172,11 @@ $(".thumbnail-gal").click(function(){
     var currentIndex = $(".item.active").index()+1;
     var totalItems = $(".item").length;
     $(".number").html(""+currentIndex+"/"+totalItems+"");
+    $(".loading").show();
 });
 
 $(".image").hover(function() {
     $(this).find(".description").toggleClass("line-height-shift");
-    $(this).find(".img").toggleClass("img-shift");
 });
 
 $(".carousel").carousel({
@@ -253,6 +244,7 @@ if (image_url[1]) {
 }
 
 
+
 // here I detect weather i long or short click on an image
 
 $(function() { 
@@ -273,7 +265,7 @@ $(function() {
     $( ".image-car" ).on( 'mouseup', function( e ) {
         if ( new Date().getTime() >= ( start + longpress )  ) {   
         } else {
-          if ($(".info-shift").hasClass("info-shift-toggle")){
+        if ($(".info-shift").hasClass("info-shift-toggle")){
         $(".info-shift").removeClass("info-shift-toggle");
         $(".image-car").toggleClass("zoom");
         $(".closertop").toggleClass("closertop-shift").delay(1500).toggleClass("hidden-xs hidden-sm hidden-md hidden-lg");  
@@ -303,6 +295,7 @@ $(".carousel-house").removeClass("col-lg-12 col-md-12 col-sm-12").removeClass("c
 $(".overlay").removeClass("overlay-zoom");
 $(".item").removeClass("item-marg-shift");
 $(".zoom-closer").toggle();
+$(".loading").hide();
 });
 
 
@@ -348,4 +341,9 @@ $("#lay5").toggleClass("lay-active5");
 })}
 ;
 
-
+$(".thumbnail-gal").click(function(){
+$('.item.active').waitForImages(true).done(function() {
+    $(".loading").hide();
+    $(".image-car").css("border","1px solid black");
+});
+});
