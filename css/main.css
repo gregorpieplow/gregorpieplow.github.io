@@ -1153,7 +1153,7 @@ z-index: 100;
 @media (min-width: 992px) {
   .gallery{
   position: relative;
-  top: 50px;
+  top: 40px;
   left: 40px;
   }
 }
