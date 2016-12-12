@@ -161,6 +161,7 @@ $(".closer").click(function () {
    $(".item").removeClass("active");
    $(".image-car").removeClass("zoom");
    $(".info-shift").removeClass("info-shift-toggle");
+   $(".loading").hide();
 });
 
 $(".thumbnail-gal").click(function(){
@@ -295,7 +296,6 @@ $(".carousel-house").removeClass("col-lg-12 col-md-12 col-sm-12").removeClass("c
 $(".overlay").removeClass("overlay-zoom");
 $(".item").removeClass("item-marg-shift");
 $(".zoom-closer").toggle();
-$(".loading").hide();
 });
 
 
@@ -344,6 +344,6 @@ $("#lay5").toggleClass("lay-active5");
 $(".thumbnail-gal").click(function(){
 $('.item.active').waitForImages(true).done(function() {
     $(".loading").hide();
-    $(".image-car").css("border","1px solid black");
+    $(".image-car").addClass("load-ready");
 });
 });
