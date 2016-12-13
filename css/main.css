@@ -189,7 +189,7 @@ z-index: 100;
 .navbar-sidebar-header-menu.active.scroll{
   display: block;
   position: fixed;
-  left: 75%;
+  left: 73%;
   width: 40px; 
   height: 40px;
   background-image: url("../assets/closer.svg");
@@ -372,7 +372,7 @@ z-index: 100;
 .navbar-sidebar-header-menu.active.scroll{
   display: block;
   position: fixed;
-  left: 82%;
+  left: 73%;
   width: 40px; 
   height: 40px;
   background-image: url("../assets/closer.svg");
