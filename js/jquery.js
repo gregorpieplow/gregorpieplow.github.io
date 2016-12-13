@@ -176,9 +176,7 @@ $(".thumbnail-gal").click(function(){
     $(".loading").show();
 });
 
-$(".image").hover(function() {
-    $(this).find(".quote").toggleClass("quote-shift");
-});
+
 
 $(".carousel").carousel({
     interval: false
