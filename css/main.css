@@ -148,7 +148,6 @@ z-index: 100;
 
   .navbar-sidebar-header-menu{
   display: block;
-  float: right;
   position: relative;
   width: 100px; 
   height: 100px;
@@ -158,12 +157,13 @@ z-index: 100;
   background-size: contain;
   margin-top: 20px;
   z-index: 100;
+  left: 70%;
   }
 
   .navbar-sidebar-header-menu.scroll{
   display: block;
   position: fixed;
-  left: 75%;
+  left: 72%;
   width: 40px; 
   height: 40px;
   background-image: url("../assets/menu-scroll.svg");
@@ -176,7 +176,7 @@ z-index: 100;
 .navbar-sidebar-header-menu.active{
   display: block;
   position: fixed;
-  left: 75%;
+  left: 73%;
   width: 40px; 
   height: 40px;
   background-image: url("../assets/closer.svg");
@@ -332,7 +332,7 @@ z-index: 100;
 
 .navbar-sidebar-header-menu{
   display: block;
-  float: right;
+  left: 70%;
   position: relative;
   width: 100px; 
   height: 100px;
@@ -346,7 +346,7 @@ z-index: 100;
   .navbar-sidebar-header-menu.scroll{
   display: block;
   position: fixed;
-  left: 82%;
+  left: 72%;
   width: 40px; 
   height: 40px;
   background-image: url("../assets/menu-scroll.svg");
@@ -359,7 +359,7 @@ z-index: 100;
 .navbar-sidebar-header-menu.active{
   display: block;
   position: fixed;
-  left: 82%;
+  left: 73%;
   width: 40px; 
   height: 40px;
   background-image: url("../assets/closer.svg");
@@ -717,7 +717,26 @@ z-index: 100;
 
 /*art page styling*/
 
-    .image{
+ 
+
+ .description{
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 275px;
+  height: 350px;
+  width: 30px;
+  font-family: 'Alegreya Sans SC', serif;
+  font-weight: 100;
+  line-height: 20px;
+  font-size: 28pt;
+  z-index: 120;
+  transition: .4s;
+}
+
+
+@media (min-width: 992px) {
+     .image{
       position: relative;
       float: left;
       left: 0px;
@@ -736,24 +755,7 @@ z-index: 100;
        border-radius: 5px;
     }
 
- .description{
-  display: none;
-  position: absolute;
-  top: 0px;
-  left: 275px;
-  height: 350px;
-  width: 30px;
-  font-family: 'Alegreya Sans SC', serif;
-  font-weight: 100;
-  line-height: 20px;
-  font-size: 28pt;
-  z-index: 120;
-  transition: .4s;
-}
-
-
-
-.quote{
+    .quote{
   font-family: 'Alegreya Sans SC', serif;
   font-weight: 100;
   line-height: 20px;
@@ -771,6 +773,92 @@ z-index: 100;
 .quote-shift{
   letter-spacing: 1px;
 }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+     .image{
+      position: relative;
+      float: left;
+      left: 0px;
+      width: 350px;
+      /*background: yellow;*/
+      margin-bottom: 50px;
+    }
+
+  
+    .img{
+      position: relative;
+      height: 350px;
+      width: 262px;
+      border: 1px solid black;
+      transition: .4s;
+       border-radius: 5px;
+    }
+
+    .quote{
+  font-family: 'Alegreya Sans SC', serif;
+  font-weight: 100;
+  line-height: 20px;
+  font-size: 28pt;
+  z-index: 120;
+  transition: .4s;
+  position: relative;
+  top: 10px;
+  width: 200px;
+  height: 20px;
+  z-index: 120;
+  letter-spacing: -7px;
+}
+
+.quote-shift{
+  letter-spacing: 1px;
+}
+}
+
+@media (max-width: 768px) {
+
+
+   .image{
+      position: relative;
+      float: left;
+      left: 0px;
+      width: 90%;
+      height: 600px;
+      /*background: yellow;*/
+      margin-bottom: 70px;
+    }
+
+
+  
+    .img{
+      position: relative;
+      height: 100%;
+      width: 100%;
+      border: 1px solid black;
+      transition: .4s;
+       border-radius: 5px;
+    }
+
+    .quote{
+  font-family: 'Alegreya Sans SC', serif;
+  font-weight: 100;
+  line-height: 20px;
+  font-size: 28pt;
+  z-index: 120;
+  transition: .4s;
+  position: relative;
+  top: 10px;
+  width: 200px;
+  height: 20px;
+  z-index: 120;
+}
+
+.quote-shift{
+}
+}
+
+
+
 
 
 
@@ -1153,7 +1241,7 @@ z-index: 100;
 @media (min-width: 992px) {
   .gallery{
   position: relative;
-  top: 40px;
+  top: 36px;
   left: 40px;
   }
 }
@@ -1162,7 +1250,7 @@ z-index: 100;
   .gallery{
   position: relative;
   top: 20px;
-  left: 20px;
+  left: -2px;
   }
 }
 
@@ -1170,6 +1258,7 @@ z-index: 100;
   .gallery{
   position: relative;
   top: 20px;
+  left: 12px;
   }
 }
 
