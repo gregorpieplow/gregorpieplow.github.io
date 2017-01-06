@@ -157,18 +157,21 @@ function scribbleresize() {
 
 $(".closer").click(function () {
    $(".overlay").hide(); 
+   $(".overlay-wrapper").hide();
    $(".gallery").show();
    $(".item").removeClass("active");
    $(".image-car").removeClass("zoom");
-   $(".info-shift").removeClass("info-shift-toggle");
+   $(".info-box").removeClass("active-info");
+   $(".info-box").removeClass("activated");
    $(".loading").hide();
 });
 
 $(".thumbnail-gal").click(function(){
     $(".overlay").show(0);
+    $(".overlay-wrapper").show(0);
     $(".gallery").hide(0);
-    $("#carousel-"+this.id).addClass("active");
-    $("#list-"+this.id).addClass("active");
+    $("#car-"+this.id).addClass("active");
+    $("#car-info-"+this.id).addClass("active-info");
     divCarSize();
     var currentIndex = $(".item.active").index()+1;
     var totalItems = $(".item").length;
@@ -176,43 +179,75 @@ $(".thumbnail-gal").click(function(){
     $(".loading").show();
 });
 
-
-
 $(".carousel").carousel({
     interval: false
 });
 
 $(".back-arrow").on("click", function () {
-    var currentIndex = $(".item.active").index()+1;
-    var totalItems = $(".item").length;
-    currentIndex = (currentIndex+totalItems-2)%totalItems+1 ;
-    $(".number").html(""+currentIndex+"/"+totalItems+"");
-    $(".image-car").removeClass("zoom");
+    var totalItems = $(".info-box").length;
+    $(".info-box").each(function(i){
+        if ($("#car-info-item-"+(i+1)).hasClass("active-info")){
+         if ($("#car-info-item-"+(i+1)).hasClass("active-info") && i == 0){
+             if ($("#car-info-item-"+(i+1)).hasClass("activated")){
+                    $("#car-info-item-"+totalItems).addClass("active-info").addClass("activated");
+                    $("#car-info-item-"+(i+1)).removeClass("active-info").removeClass("activated");
+                }else{
+             $("#car-info-item-"+totalItems).addClass("active-info");
+             $("#car-info-item-"+(i+1)).removeClass("active-info");}
+             return false;
+         }else{
+              if ($("#car-info-item-"+(i+1)).hasClass("activated")){
+                  $("#car-info-item-"+i).addClass("active-info").addClass("activated");
+                  $("#car-info-item-"+(i+1)).removeClass("active-info").removeClass("activated");
+              }else{
+             $("#car-info-item-"+i).addClass("active-info");
+             $("#car-info-item-"+(i+1)).removeClass("active-info");
+            }
+             return false;
+         }  
+        }else{};
+    });
 });
 
 $(".forward-arrow").on("click", function () {
-    var currentIndex = $(".item.active").index()+1;
-    var totalItems = $(".item").length;
-    currentIndex = currentIndex%totalItems+1;
-    $(".number").html(""+currentIndex+"/"+totalItems+"");
-    $(".image-car").removeClass("zoom");
-    $(".item.active").next();
+   var totalItems = $(".info-box").length;
+   $(".info-box").each(function(i){
+   if ($("#car-info-item-"+(i+1)).hasClass("active-info")){
+         if ($("#car-info-item-"+(i+1)).hasClass("active-info") && (i+1) == totalItems){
+             if ($("#car-info-item-"+(i+1)).hasClass("activated")){
+                $("#car-info-item-"+1).addClass("active-info").addClass("activated");
+                $("#car-info-item-"+(i+1)).removeClass("active-info").addClass("activated");
+            }else{
+                $("#car-info-item-"+1).addClass("active-info");
+                $("#car-info-item-"+(i+1)).removeClass("active-info");
+            }
+             return false;
+         }else{
+              if ($("#car-info-item-"+(i+1)).hasClass("activated")){
+                $("#car-info-item-"+(i+2)).addClass("active-info").addClass("activated");
+                $("#car-info-item-"+(i+1)).removeClass("active-info").addClass("activated");
+            }else{
+                $("#car-info-item-"+(i+2)).addClass("active-info");
+                $("#car-info-item-"+(i+1)).removeClass("active-info");
+            }
+             return false;
+         }  
+        }else{};
+   });
 });
 
 
 $(".info").click(function(){
-$(".info-shift").toggleClass("info-shift-toggle");
+$(".info-box.active-info").toggleClass("activated");
 });
 
 
 // setting the sizes of all the carousel divs
 
 function divCarSize() {
-    $(".image-car").each(function(i){
-    
+    $(".item").each(function(i){
     var image_url = $(this).css('background-image'),
     image;
-
 // Remove url() or in case of Chrome url("")
 image_url = image_url.match(/^url\("?(.+?)"?\)$/);
 
@@ -225,15 +260,15 @@ if (image_url[1]) {
         var h = image.height;
         var w = image.width;
         var ratio =  w / h;
-        if (.6 * window.innerWidth >= window.innerHeight){
-            var activeDivHeight =  window.innerHeight*.97;
+        if ( window.innerWidth >= window.innerHeight){
+            var activeDivHeight =  window.innerHeight;
             var activeDivWidth = activeDivHeight * ratio; 
-            $("#pic-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
+            $("#car-item-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
         }
         else{
-            var activeDivWidth = window.innerWidth*.73; 
+            var activeDivWidth = window.innerWidth; 
             var activeDivHeight =  activeDivWidth / ratio;
-            $("#pic-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
+            $("#car-item-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
         }
         });   
     image.src = image_url;
@@ -243,50 +278,7 @@ if (image_url[1]) {
 };
 
 
-
-
 // here I detect weather i long or short click on an image
-
-$(function() { 
-
-    // how many milliseconds is a long press?
-    var longpress = 200;
-    // holds the start time
-    var start;
-
-    $( ".image-car" ).on( 'mousedown', function( e ) {
-        start = new Date().getTime();
-    } );
-
-    $( ".image-car" ).on( 'mouseleave', function( e ) {
-        start = 0;
-    } );
-
-    $( ".image-car" ).on( 'mouseup', function( e ) {
-        if ( new Date().getTime() >= ( start + longpress )  ) {   
-        } else {
-        if ($(".info-shift").hasClass("info-shift-toggle")){
-        $(".info-shift").removeClass("info-shift-toggle");
-        $(".image-car").toggleClass("zoom");
-        $(".closertop").toggleClass("closertop-shift").delay(1500).toggleClass("hidden-xs hidden-sm hidden-md hidden-lg");  
-        $(".carousel-house").toggleClass("col-lg-11 col-md-11 col-sm-11").toggleClass("col-lg-12 col-md-12 col-sm-12").toggleClass("carousel-house-shift");
-        $(".overlay").toggleClass("overlay-zoom");
-        $(".zoom-closer").toggle();
-        $(".item").toggleClass("item-marg");
-        // $(".info-shift").addClass("info-shift-toggle");
-        }else{
-        $(".info-shift").removeClass("info-shift-toggle");
-        $(".image-car").toggleClass("zoom");  
-        $(".closertop").toggleClass("closertop-shift").delay(1500).toggleClass("hidden-xs hidden-sm hidden-md hidden-lg");  
-        $(".carousel-house").toggleClass("col-lg-11 col-md-11 col-sm-11").toggleClass("col-lg-12 col-md-12 col-sm-12").toggleClass("carousel-house-shift");
-        $(".overlay").toggleClass("overlay-zoom");
-        $(".item").toggleClass("item-marg-shift");
-        $(".zoom-closer").toggle();
-        } 
-        }
-    } );
-
-});
 
 $(".zoom-closer").click(function(){
 $(".image-car").removeClass("zoom");  
@@ -341,8 +333,58 @@ $("#lay5").toggleClass("lay-active5");
 ;
 
 $(".thumbnail-gal").click(function(){
-$('.item.active').waitForImages(true).done(function() {
+$('.item').waitForImages(true).done(function() {
     $(".loading").hide();
-    $(".image-car").addClass("load-ready");
+    //$(".carousel-inner").addClass("load-ready");
 });
 });
+
+
+// new overhauled overlay carousel
+
+// here I detect weather i long or short click on an image
+
+$(function() { 
+
+    // how many milliseconds is a long press?
+    var longpress = 200;
+    // holds the start time
+    var start;
+
+    $( ".item" ).on( 'mousedown', function( e ) {
+        start = new Date().getTime();
+    } );
+
+    $( ".item" ).on( 'mouseleave', function( e ) {
+        start = 0;
+    } );
+
+    $( ".item" ).on( 'mouseup', function( e ) {
+        if ( new Date().getTime() >= ( start + longpress )  ) {   
+        } else {
+            var clicks = $(this).data('clicks');
+            var thisDivHeight = $(this).height();
+            var thisDivWidth =  $(this).width();
+            var ratio = thisDivHeight / thisDivWidth;
+            if (clicks) { 
+            $('.overlay-wrapper').removeClass('overlay-toggle');  
+            $('.item.active').removeClass('zoom-item');
+            $('.item.active').animate({"height" : thisDivHeight / 3 + "px"} , {duration: 100, queue: false});
+            $('.item.active').animate({"width" : thisDivHeight / 3 /ratio + "px"} , {duration: 100, queue: false});
+            $(".back-car").show();
+            $(".forward-car").show();
+            }
+            else { 
+            $('.overlay-wrapper').addClass('overlay-toggle');  
+            $('.item.active').addClass('zoom-item');
+            $('.item.active').animate({"height" : thisDivHeight * 3 + "px"} , {duration: 100, queue: false});
+            $('.item.active').animate({"width" : thisDivHeight * 3 /ratio + "px"} , {duration: 100, queue: false});
+            $(".back-car").hide();
+            $(".forward-car").hide();
+            }
+            $(this).data("clicks", !clicks);
+        }
+    } );
+
+});
+

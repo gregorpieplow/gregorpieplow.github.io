@@ -22,7 +22,6 @@ nav li a:hover {
   background-image: none;
   background-image: none;
   filter: none;
-  opacity: .9;
   
 }
 
@@ -34,7 +33,6 @@ nav li a:hover {
   background-image: none;
   background-image: none;
   filter: none;
-  opacity: .9;
 }
 
 /*scrollbar*/
@@ -721,6 +719,20 @@ z-index: 100;
 
  
 
+ .description{
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 275px;
+  height: 350px;
+  width: 30px;
+  font-family: 'Alegreya Sans SC', serif;
+  font-weight: 100;
+  line-height: 20px;
+  font-size: 28pt;
+  z-index: 120;
+  transition: .4s;
+}
 
 
 @media (min-width: 992px) {
@@ -740,7 +752,7 @@ z-index: 100;
       width: 262px;
       border: 1px solid black;
       transition: .4s;
-       border-radius: 2px;
+       border-radius: 5px;
     }
 
     .quote{
@@ -777,7 +789,7 @@ z-index: 100;
       width: 262px;
       border: 1px solid black;
       transition: .4s;
-       border-radius: 2px;
+       border-radius: 5px;
     }
 
     .quote{
@@ -819,7 +831,7 @@ z-index: 100;
       width: 100%;
       border: 1px solid black;
       transition: .4s;
-       border-radius: 2px;
+       border-radius: 5px;
     }
 
     .quote{
@@ -910,7 +922,32 @@ z-index: 100;
   z-index: 121;
 }
 
+.car-size21{
+  height: 100%;
+  width: 100%;
+  /*overflow: visible;*/
+}
 
+.car-size2{
+  height: 100%;
+  width: 100%;
+}
+
+.image-car{
+  position: relative;
+  left: 0px; 
+  z-index: 101;
+  height: 100%;
+  width: 100%;  
+  transition: .25s;
+  cursor: -moz-zoom-in; 
+  cursor: -webkit-zoom-in; 
+  cursor: zoom-in;
+}
+
+.load-ready{
+  border: 1px solid black;
+}
 
 .zoom{
   position: relative;
@@ -920,13 +957,11 @@ z-index: 100;
   cursor: -webkit-grab;
 }
 
-.closer{
+  .closer{
   position: relative;
-  top:5%;
-  left: 38%;
-  opacity: .9;
-  height: 30px;
-  width: 30px;
+  opacity: .5;
+  height: 25px;
+  width: 25px;
   background-image: url("../assets/closer.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -938,29 +973,219 @@ z-index: 100;
   opacity: .5;
   height: 30px;
   width: 30px;
-  left: 20%;
-  top: 5%;
+  margin-top: 30px;
+  margin-left: -2px;
   background-image: url("../assets/info.svg");
   background-size: cover;
   background-repeat: no-repeat;
   transition: .2s
 }
 
+.info-shift{
+  position: relative;
+  height: 100px;
+  width: 400px;
+  margin-top: -100px;
+  left: 10px;
+  z-index: 130;
+  transition: .25s;
+}
+
+.info-shift-toggle{
+ height: 10%; 
+ margin-top: 0px;
+}
+
+
+
+@media (min-width: 1199px) {
+
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /*display: none;*/
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  background-repeat: repeat;
+  z-index: 1000 ;
+  /*padding-top: 10px;
+  padding-left: 90px;
+  padding-bottom: 30px;*/
+  transition: .2s
+}
+
+.overlay-zoom{
+ padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.item{
+  position: relative;
+  margin-left: 0px;
+  z-index: 100;
+  overflow: scroll;
+  transition: .2s;
+}
+
+.item-marg-shift{
+}
+
+.carousel-house-shift{
+}
+
+.closertop{
+  position: relative;
+  height: 100%;
+  z-index: 110;
+  transition: .5s;
+}
+
+.closertop-shift{
+  left: -100px;
+}
+  .car-whitespace{
+  position: relative;
+  width: 100%;
+  height: 77%;
+}
+
+.back-arrow-link.sm{
+  position: relative;
+  display: inline;
+  height: 25px;
+  width: 25px;
+  z-index: 100;
+}
+
+.forward-arrow-link.sm{
+  position: relative;
+  display: inline;
+  margin-left: 30px;
+  height: 25px;
+  width: 25px;
+  z-index: 100;
+}
+}
+
+@media (max-width: 1199px) {
+
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /*display: none;*/
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  background-repeat: repeat;
+  z-index: 1000 ;
+  /*padding-top: 30px;
+  padding-left: 20px;
+  padding-bottom: 30px;*/
+   transition: .2s;
+}
+
+.overlay-zoom{
+ padding-top: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
+.item{
+  position: relative;
+  z-index: 100;
+  overflow: scroll;
+  margin-left: 30px;
+  transition: .2s;
+}
+
+.carousel-house-shift{
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 130%;
+}
+
+.item-marg-shift{
+  margin-left: 0px;
+  height: 2000px;
+  width: 100%;
+  margin-right: -300px;
+}
+
+.car-whitespace{
+  position: relative;
+  width: 30px;
+  height: 100px;
+}
+
+.closertop{
+  position: relative;
+  display: block;
+  height:0%;
+  width: 0%;
+  z-index: 110;
+  transition: .25s;
+}
+
+
+.back-arrow-link.sm{
+  position: relative;
+  display: block;
+  height: 25px;
+  width: 25px;
+  z-index: 100;
+}
+
+.forward-arrow-link.sm{
+  position: relative;
+  display: block;
+  height: 25px;
+  width: 25px;
+  margin-left: 5px;
+  margin-bottom: 50px;
+  z-index: 100;
+}
+}
+
+
+
+
+
+
+
+/*.carousel-top-nav {
+  position: relative;
+  height: 35px;
+}*/
+
+/*.back-arrow-wrapper {
+  height: 700px;
+}*/
+
+
 
 .back-arrow{
   position: relative;
-  height: 40px;
-  width: 40px;
+  height: 25px;
+  width: 25px;
   background-image: url("../assets/back.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
+/*.forward-arrow-wrapper {
+  height: 700px;
+}*/
+
 
 .forward-arrow{
   position: relative;
-  height: 40px;
-  width: 40px;
+  height: 25px;
+  width: 25px;
   background-image: url("../assets/next.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -1074,12 +1299,26 @@ z-index: 100;
    background-image: url("../assets/instagram.svg");
 }
 
-
+.row1{
+  margin: none;
+  padding: none;
+  transition: .2s;
+  width: 350px;
+  /*background: red;*/
+}
 
 
 /*front page styling */
 
-
+.rect {
+  position: absolute;
+  width: 63%;
+  height: 112%;
+  top: 25%;
+  left: 15%;
+  z-index: -10;
+  background-color:  black;
+}
 
 @keyframes eye {
   0%, 100%{
@@ -1103,28 +1342,7 @@ z-index: 100;
     height: 300px;
     width: 300px;
     background: blue;
-    transition: all .35s;
   }
-
-  .test.push{
-    position: relative;
-    margin: auto;
-    display: block;
-    height: 400px;
-    width: 400px;
-    background: green;
-    transition: all .2s;
-  }
-  .test.push:hover{
-    position: relative;
-    display: block;
-    float: left;
-    height: 500px;
-    width: 500px;
-    background: green;
-  }
-
-
 
 /*Gallery overhaul*/
 
@@ -1132,25 +1350,16 @@ z-index: 100;
   position: absolute;
   top: 0px;
   left: 0px;
-  display: none;
+  /*display: none;*/
   width: 100%;
   height: 100%;
   background-color: white;
   background-repeat: repeat;
   z-index: 1000 ;
-  transition: .2s;
-}
-
-.overlay-wrapper {
-  position: fixed;
-  z-index: 1000;
-  top: 0px;
-  left: 0px;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  background-repeat: repeat;
+  /*padding-top: 10px;
+  padding-left: 90px;
+  padding-bottom: 30px;*/
+  transition: .2s
 }
   
   .back-car{
@@ -1159,15 +1368,8 @@ z-index: 100;
     position: relative;
     height: 100%;
     width: 7%;
+    background-color: lightpink;
     z-index: 2;
-  }
-
-  .back-arrow-link{
-   position: absolute;
-   width: 25px;
-   height: 25px;
-   top: 50%;
-   right: 50%;
   }
 
   .center-car{
@@ -1177,23 +1379,18 @@ z-index: 100;
     width: 86%;
     height: 100%;
     z-index: 1;
+    background: lightskyblue;
+
   }
 
   .forward-car{
     display: block;
-    float: left;
     position: relative;
+    float: left;
     height: 100%;
     width: 7%;
+    background: lightpink;
     z-index: 4;
-  }
-
-  .forward-arrow-link{
-   position: absolute;
-   width: 25px;
-   height: 25px;
-   top: 50%;
-   left: 50%;
   }
 
   #myCarousel{
@@ -1207,86 +1404,73 @@ z-index: 100;
     display: block;
     width: 100%;
     height: 100%;
-    overflow: visible;
   }
 
 
-#car-item-1{
+#car-item-pic-1{
   background-image: url("../images/art/lg/1.jpg"); 
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
-#car-item-2{
+#car-item-pic-2{
   background-image: url("../images/art/lg/2.jpg"); 
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-#car-item-3{
+#car-item-pic-3{
   background-image: url("../images/art/lg/3.jpg"); 
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-#car-item-4{
+#car-item-pic-4{
   background-image: url("../images/art/lg/4.jpg"); 
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-#car-item-5{
+#car-item-pic-5{
   background-image: url("../images/art/lg/5.jpg"); 
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-#car-item-6{
+#car-item-pic-6{
   background-image: url("../images/art/lg/6.jpg"); 
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.item.active{
-  position: relative;
+  
+*{
+  border: 1px dashed black;
+}
+
+.item{
+  display: block;
   margin: auto;
+  overflow: scroll;
+  background: blue;
   z-index: 100;
-  overflow: initial !important;
-  cursor: zoom-in;
+  height: 100%;
+}
+
+.zoom{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 300% !important;
+  width: 200% !important;
 }
 
 .zoom-item{
-  cursor: -webkit-grab !important;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100% !important;
+  width: 100% !important;
 }
 
-.overlay-toggle{
-  overflow: scroll;
-}
-
-.info-box{
- position: relative;
- visibility: hidden;
- display: block;
- float: left;
- width: 0px;
- height: 0px;
- left: 0px;
- top: 0px;
- margin: none;
- transition: all .2s;
-}
-
-.activated{
-  position: relative;
-  visibility: visible;
-  display: block;
-  float: left;
-  top: 0%;
-  left: 0%;
-  width: 30%;
-  height: 100%;
-  z-index: 109;
-  background-color: white;
-  transition: all .2s;
-}
 
