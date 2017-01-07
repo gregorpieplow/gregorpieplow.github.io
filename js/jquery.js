@@ -191,17 +191,21 @@ $(".back-arrow").on("click", function () {
              if ($("#car-info-item-"+(i+1)).hasClass("activated")){
                     $("#car-info-item-"+totalItems).addClass("active-info").addClass("activated");
                     $("#car-info-item-"+(i+1)).removeClass("active-info").removeClass("activated");
+                    $(".info-box").css("transition","none");
                 }else{
              $("#car-info-item-"+totalItems).addClass("active-info");
-             $("#car-info-item-"+(i+1)).removeClass("active-info");}
+             $("#car-info-item-"+(i+1)).removeClass("active-info");
+             $(".info-box").css("transition","none");}
              return false;
          }else{
               if ($("#car-info-item-"+(i+1)).hasClass("activated")){
                   $("#car-info-item-"+i).addClass("active-info").addClass("activated");
                   $("#car-info-item-"+(i+1)).removeClass("active-info").removeClass("activated");
+                   $(".info-box").css("transition","none");
               }else{
              $("#car-info-item-"+i).addClass("active-info");
              $("#car-info-item-"+(i+1)).removeClass("active-info");
+              $(".info-box").css("transition","none");
             }
              return false;
          }  
@@ -216,19 +220,23 @@ $(".forward-arrow").on("click", function () {
          if ($("#car-info-item-"+(i+1)).hasClass("active-info") && (i+1) == totalItems){
              if ($("#car-info-item-"+(i+1)).hasClass("activated")){
                 $("#car-info-item-"+1).addClass("active-info").addClass("activated");
-                $("#car-info-item-"+(i+1)).removeClass("active-info").addClass("activated");
+                $("#car-info-item-"+(i+1)).removeClass("active-info").removeClass("activated");
+                 $(".info-box").css("transition","none");
             }else{
                 $("#car-info-item-"+1).addClass("active-info");
                 $("#car-info-item-"+(i+1)).removeClass("active-info");
+                $(".info-box").css("transition","none");
             }
              return false;
          }else{
               if ($("#car-info-item-"+(i+1)).hasClass("activated")){
                 $("#car-info-item-"+(i+2)).addClass("active-info").addClass("activated");
-                $("#car-info-item-"+(i+1)).removeClass("active-info").addClass("activated");
+                $("#car-info-item-"+(i+1)).removeClass("active-info").removeClass("activated");
+                 $(".info-box").css("transition","none");
             }else{
                 $("#car-info-item-"+(i+2)).addClass("active-info");
                 $("#car-info-item-"+(i+1)).removeClass("active-info");
+                $(".info-box").css("transition","none");
             }
              return false;
          }  
@@ -238,6 +246,7 @@ $(".forward-arrow").on("click", function () {
 
 
 $(".info").click(function(){
+$(".info-box").css("transition","all .25s");
 $(".info-box.active-info").toggleClass("activated");
 });
 
@@ -381,6 +390,7 @@ $(function() {
             $('.item.active').animate({"width" : thisDivHeight * 3 /ratio + "px"} , {duration: 100, queue: false});
             $(".back-car").hide();
             $(".forward-car").hide();
+            $(".info-box").removeClass("activated");
             }
             $(this).data("clicks", !clicks);
         }

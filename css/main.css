@@ -912,60 +912,6 @@ z-index: 100;
 
 
 
-.zoom{
-  position: relative;
-  height: 230%;
-  width: 230%;
-  border: none;
-  cursor: -webkit-grab;
-}
-
-.closer{
-  position: relative;
-  top:5%;
-  left: 38%;
-  opacity: .9;
-  height: 30px;
-  width: 30px;
-  background-image: url("../assets/closer.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: .2s;
-}
-
-.info{
-  position: relative;
-  opacity: .5;
-  height: 30px;
-  width: 30px;
-  left: 20%;
-  top: 5%;
-  background-image: url("../assets/info.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: .2s
-}
-
-
-.back-arrow{
-  position: relative;
-  height: 40px;
-  width: 40px;
-  background-image: url("../assets/back.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-
-.forward-arrow{
-  position: relative;
-  height: 40px;
-  width: 40px;
-  background-image: url("../assets/next.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 
 .closer:hover {
   opacity: 1;
@@ -1152,49 +1098,6 @@ z-index: 100;
   background-color: white;
   background-repeat: repeat;
 }
-  
-  .back-car{
-    display: block;
-    float: left;
-    position: relative;
-    height: 100%;
-    width: 7%;
-    z-index: 2;
-  }
-
-  .back-arrow-link{
-   position: absolute;
-   width: 25px;
-   height: 25px;
-   top: 50%;
-   right: 50%;
-  }
-
-  .center-car{
-    display: block;
-    position: relative;
-    float: left;
-    width: 86%;
-    height: 100%;
-    z-index: 1;
-  }
-
-  .forward-car{
-    display: block;
-    float: left;
-    position: relative;
-    height: 100%;
-    width: 7%;
-    z-index: 4;
-  }
-
-  .forward-arrow-link{
-   position: absolute;
-   width: 25px;
-   height: 25px;
-   top: 50%;
-   left: 50%;
-  }
 
   #myCarousel{
     display: block;
@@ -1203,12 +1106,7 @@ z-index: 100;
     z-index: 5;
   }
 
-  .carousel-inner{
-    display: block;
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-  }
+ 
 
 
 #car-item-1{
@@ -1259,34 +1157,274 @@ z-index: 100;
   cursor: -webkit-grab !important;
 }
 
+
+
+
+/*CAROUSEL RESPONSIVE ELEMENTS*/
+/*BIG SCREEN*/
+
+@media (min-width: 768px) {
+
+  .info{
+  position: relative;
+  opacity: .5;
+  height: 30px;
+  width: 30px;
+  left: 20%;
+  top: 5%;
+  background-image: url("../assets/info.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: .2s
+}
+
+  .closer{
+  position: relative;
+  top:5%;
+  left: 38%;
+  opacity: .9;
+  height: 30px;
+  width: 30px;
+  background-image: url("../assets/closer.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: .2s;
+}
+
+   .back-car{
+    display: block;
+    float: left;
+    position: relative;
+    height: 100%;
+    width: 7%;
+    z-index: 2;
+  }
+
+  .center-car{
+    display: block;
+    position: relative;
+    float: left;
+    width: 86%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .forward-car{
+    display: block;
+    float: left;
+    position: relative;
+    height: 100%;
+    width: 7%;
+    z-index: 4;
+  }
+
+.back-arrow-link{
+   position: absolute;
+   width: 25px;
+   height: 25px;
+   top: 50%;
+   right: 50%;
+  }
+
+ .forward-arrow-link{
+   position: absolute;
+   width: 25px;
+   height: 25px;
+   top: 50%;
+   left: 50%;
+  }
+
+  .back-arrow{
+  position: relative;
+  height: 40px;
+  width: 40px;
+  background-image: url("../assets/back.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.forward-arrow{
+  position: relative;
+  height: 40px;
+  width: 40px;
+  background-image: url("../assets/next.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+   .carousel-inner{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .info-box{
+ position: absolute;
+ visibility: hidden;
+ float: left;
+ bottom: -300px;
+ left: 0px;
+ height: 300px;
+ width: 166px;
+ margin: none;
+ z-index: 109;
+ border-top-right-radius: 30px;
+ border-top-left-radius: 30px;
+ transition: all .25s;
+ background-color: #d2d2d2;
+}
+
+
+  .activated{
+  position: absolute;
+  visibility: visible;
+  float: left;
+  bottom: 0px;
+  left: 0%;
+  height: 300px;
+  width: 166px;
+  margin: none;
+  background-color: #d2d2d2;
+}
+
 .overlay-toggle{
   overflow: scroll;
 }
 
-.info-box{
- position: relative;
- visibility: hidden;
- display: block;
- float: left;
- width: 0px;
- height: 0px;
- left: 0px;
- top: 0px;
- margin: none;
- transition: all .2s;
+
 }
 
-.activated{
-  position: relative;
-  visibility: visible;
-  display: block;
+/*SMALL SCREEN*/
+@media (max-width: 768px) {
+
+  .info{
   float: left;
+  opacity: .5;
+  width: 30px;
+  height: 30px;
+  margin: 5px 20px 5px 5px;
   top: 0%;
-  left: 0%;
-  width: 30%;
-  height: 100%;
-  z-index: 109;
-  background-color: white;
-  transition: all .2s;
+  background-image: url("../assets/info.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: .2s
 }
 
+  .closer{
+  float: right;
+  opacity: .9;
+  width: 30px;
+  height: 30px;
+  margin: 5px 40px 5px 40px;
+  top: 0%;
+  background-image: url("../assets/closer.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: .2s;
+}
+
+ .back-arrow-link{
+   position: relative;
+   float: left;
+   width: 30px;
+   height: 30px;
+   margin: 5px 40px 5px 20px;
+   top: 0%;
+  }
+
+ .forward-arrow-link{
+   display: inline-block;
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   top: 0%;
+   margin: 5px 40px 5px 40px;
+  }
+
+  .back-arrow{
+  position: relative;
+  height: 30px;
+  width: 30px;
+  background-image: url("../assets/back.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.forward-arrow{
+  position: relative;
+  height: 30px;
+  width: 30px;
+  background-image: url("../assets/next.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+   .back-car{
+    display: none;
+  }
+
+  .center-car{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .forward-car{
+    display: none;
+  }
+
+  .top-nav-var-sm{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+  }
+
+ 
+   .carousel-inner{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+  }
+
+  .info-box{
+ position: absolute;
+ visibility: hidden;
+ float: left;
+ bottom: -300px;
+ left: 0px;
+ height: 300px;
+ width: 166px;
+ margin: none;
+ z-index: 109;
+ border-top-right-radius: 30px;
+ border-top-left-radius: 30px;
+ transition: all .25s;
+ background-color: #d2d2d2;
+}
+
+
+  .activated{
+  position: absolute;
+  visibility: visible;
+  float: left;
+  bottom: 0px;
+  left: 0%;
+  height: 300px;
+  width: 166px;
+  margin: none;
+  background-color: #d2d2d2;
+}
+
+.overlay-toggle{
+  overflow: scroll;
+}
+
+}
