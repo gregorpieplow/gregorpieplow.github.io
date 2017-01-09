@@ -220,7 +220,7 @@ $(".forward-arrow").on("click", function () {
                 $('#car-item-'+(i+1)).css('left', '0px');
                 $("#car-info-item-"+1).addClass("active-info").addClass("activated");
                 $("#car-info-item-"+(i+1)).removeClass("active-info").removeClass("activated");
-                 $(".info-box").css("transition","none");
+                $(".info-box").css("transition","none");
             }else{
                 $("#car-info-item-"+1).addClass("active-info");
                 $("#car-info-item-"+(i+1)).removeClass("active-info");
@@ -300,7 +300,13 @@ if (image_url[1]) {
         if ( window.innerWidth >= window.innerHeight){
             var activeDivHeight =  window.innerHeight;
             var activeDivWidth = activeDivHeight * ratio; 
+            if (activeDivWidth+400 >= window.innerWidth){
+                $("#car-item-"+(i+1)).css({height : (window.innerWidth * .86-210)/ratio+"px", 
+                width : window.innerWidth * .86-210+"px", top : "50%", transform: "translateY(-50%)", transition: "none"});    
+                console.log('naaa');
+            }else{
             $("#car-item-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
+        };
         }
         else{
             var activeDivWidth = window.innerWidth; 
@@ -408,9 +414,12 @@ $(function() {
             $('.item.active').removeClass('zoom-item');
             $('.item.active').animate({"height" : thisDivHeight / 3 + "px"} , {duration: 100, queue: false});
             $('.item.active').animate({"width" : thisDivHeight / 3 /ratio + "px"} , {duration: 100, queue: false});
+            if ($(".top-nav-car").css("display","none")){
             $(".back-car").show();
             $(".forward-car").show();
+            }else{
             $(".top-nav-car").show();
+            };
             }
             else { 
             $('.overlay-wrapper').addClass('overlay-toggle');  

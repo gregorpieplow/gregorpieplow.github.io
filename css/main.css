@@ -886,8 +886,8 @@ z-index: 100;
 .loading{
     position: absolute;
     display: none;
-    left:30%;
-    top:30%;
+    left:50%;
+    top:50%;
     width: 100px;
     height: 100px;
     background-image:  url("../assets/load_small.gif");
@@ -1159,7 +1159,12 @@ z-index: 100;
 
 @media (min-width: 768px) {
 
+    .top-nav-car{
+    display: none;
+  }
+
   .item.active{
+  position: relative;
   margin: auto;
   overflow: initial !important;
   cursor: zoom-in;
