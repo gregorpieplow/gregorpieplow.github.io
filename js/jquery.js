@@ -155,16 +155,7 @@ function scribbleresize() {
 
 /*carousel stuff*/
 
-$(".closer").click(function () {
-   $(".overlay").hide(); 
-   $(".overlay-wrapper").hide();
-   $(".gallery").show();
-   $(".item").removeClass("active");
-   $(".image-car").removeClass("zoom");
-   $(".info-box").removeClass("active-info");
-   $(".info-box").removeClass("activated");
-   $(".loading").hide();
-});
+
 
 $(".thumbnail-gal").click(function(){
     $(".overlay").show(0);
@@ -185,10 +176,13 @@ $(".carousel").carousel({
 
 $(".back-arrow").on("click", function () {
     var totalItems = $(".info-box").length;
+    var shift = 70;
     $(".info-box").each(function(i){
         if ($("#car-info-item-"+(i+1)).hasClass("active-info")){
          if ($("#car-info-item-"+(i+1)).hasClass("active-info") && i == 0){
              if ($("#car-info-item-"+(i+1)).hasClass("activated")){
+                    $('#car-item-'+totalItems).css('left', shift+'px');
+                    $('#car-item-'+ 1).css('left', '0px');
                     $("#car-info-item-"+totalItems).addClass("active-info").addClass("activated");
                     $("#car-info-item-"+(i+1)).removeClass("active-info").removeClass("activated");
                     $(".info-box").css("transition","none");
@@ -199,6 +193,8 @@ $(".back-arrow").on("click", function () {
              return false;
          }else{
               if ($("#car-info-item-"+(i+1)).hasClass("activated")){
+                  $('#car-item-'+i).css('left', shift+'px');
+                  $('#car-item-'+(i+1)).css('left', '0px');
                   $("#car-info-item-"+i).addClass("active-info").addClass("activated");
                   $("#car-info-item-"+(i+1)).removeClass("active-info").removeClass("activated");
                    $(".info-box").css("transition","none");
@@ -214,11 +210,14 @@ $(".back-arrow").on("click", function () {
 });
 
 $(".forward-arrow").on("click", function () {
+   var shift = 70;
    var totalItems = $(".info-box").length;
    $(".info-box").each(function(i){
    if ($("#car-info-item-"+(i+1)).hasClass("active-info")){
          if ($("#car-info-item-"+(i+1)).hasClass("active-info") && (i+1) == totalItems){
              if ($("#car-info-item-"+(i+1)).hasClass("activated")){
+                $('#car-item-'+1).css('left', shift+'px');
+                $('#car-item-'+(i+1)).css('left', '0px');
                 $("#car-info-item-"+1).addClass("active-info").addClass("activated");
                 $("#car-info-item-"+(i+1)).removeClass("active-info").removeClass("activated");
                  $(".info-box").css("transition","none");
@@ -230,6 +229,8 @@ $(".forward-arrow").on("click", function () {
              return false;
          }else{
               if ($("#car-info-item-"+(i+1)).hasClass("activated")){
+                $('#car-item-'+(i+2)).css('left', shift+'px');
+                $('#car-item-'+(i+1)).css('left', '0px');
                 $("#car-info-item-"+(i+2)).addClass("active-info").addClass("activated");
                 $("#car-info-item-"+(i+1)).removeClass("active-info").removeClass("activated");
                  $(".info-box").css("transition","none");
@@ -246,8 +247,35 @@ $(".forward-arrow").on("click", function () {
 
 
 $(".info").click(function(){
-$(".info-box").css("transition","all .25s");
-$(".info-box.active-info").toggleClass("activated");
+ var clicks = $(this).data('clicks');
+           
+            if (clicks) { 
+                $(".info-box").css("transition","all .25s");
+                $(".info-box.active-info").removeClass("activated"); 
+                $(".item.active").animate({"left" :  "-=70px"} , {duration: 250, speacialEasing: {"left" :"easeInEaseOut"}});
+            }
+            else { 
+                $(".info-box").css("transition","all .25s");
+                $(".info-box.active-info").addClass("activated"); 
+                $(".item.active").animate({"left" : "70px"} , {duration: 250, queue: false});
+            }
+            $(this).data("clicks", !clicks);
+});
+
+$(".closer").click(function () {
+    if ($(".info-box").hasClass("activated")){
+        var clicks = $(".info").data('clicks');
+        $(".item.active").css("left","0px");
+         $(".info").data("clicks", !clicks);
+    }else{};
+   $(".overlay").hide(); 
+   $(".overlay-wrapper").hide();
+   $(".gallery").show();
+   $(".item").removeClass("active");
+   $(".image-car").removeClass("zoom");
+   $(".info-box").removeClass("active-info");
+   $(".info-box").removeClass("activated");
+   $(".loading").hide();
 });
 
 
@@ -342,7 +370,7 @@ $("#lay5").toggleClass("lay-active5");
 ;
 
 $(".thumbnail-gal").click(function(){
-$('.item').waitForImages(true).done(function() {
+$('.item.active').waitForImages(true).done(function() {
     $(".loading").hide();
     //$(".carousel-inner").addClass("load-ready");
 });
@@ -371,28 +399,36 @@ $(function() {
     $( ".item" ).on( 'mouseup', function( e ) {
         if ( new Date().getTime() >= ( start + longpress )  ) {   
         } else {
-            var clicks = $(this).data('clicks');
+            var clicks2 = $(this).data('clicks');
             var thisDivHeight = $(this).height();
             var thisDivWidth =  $(this).width();
             var ratio = thisDivHeight / thisDivWidth;
-            if (clicks) { 
+            if (clicks2) { 
             $('.overlay-wrapper').removeClass('overlay-toggle');  
             $('.item.active').removeClass('zoom-item');
             $('.item.active').animate({"height" : thisDivHeight / 3 + "px"} , {duration: 100, queue: false});
             $('.item.active').animate({"width" : thisDivHeight / 3 /ratio + "px"} , {duration: 100, queue: false});
             $(".back-car").show();
             $(".forward-car").show();
+            $(".top-nav-car").show();
             }
             else { 
             $('.overlay-wrapper').addClass('overlay-toggle');  
             $('.item.active').addClass('zoom-item');
+            if ($(".info-box").hasClass("activated")){
+                var clicks = $(".info").data('clicks');
+                $(".item.active").css("left","0px");
+                $(".info").data("clicks", !clicks);
+            }else{};
             $('.item.active').animate({"height" : thisDivHeight * 3 + "px"} , {duration: 100, queue: false});
             $('.item.active').animate({"width" : thisDivHeight * 3 /ratio + "px"} , {duration: 100, queue: false});
             $(".back-car").hide();
             $(".forward-car").hide();
             $(".info-box").removeClass("activated");
+            $(".top-nav-car").hide();
+            var clicks 
             }
-            $(this).data("clicks", !clicks);
+            $(this).data("clicks", !clicks2);
         }
     } );
 

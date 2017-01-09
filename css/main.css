@@ -1145,13 +1145,7 @@ z-index: 100;
   background-repeat: no-repeat;
 }
 
-.item.active{
-  position: relative;
-  margin: auto;
-  z-index: 100;
-  overflow: initial !important;
-  cursor: zoom-in;
-}
+
 
 .zoom-item{
   cursor: -webkit-grab !important;
@@ -1164,6 +1158,13 @@ z-index: 100;
 /*BIG SCREEN*/
 
 @media (min-width: 768px) {
+
+  .item.active{
+  margin: auto;
+  overflow: initial !important;
+  cursor: zoom-in;
+  background-color: white;
+}
 
   .info{
   position: relative;
@@ -1259,34 +1260,33 @@ z-index: 100;
     overflow: visible;
   }
 
-  .info-box{
- position: absolute;
+.info-box{
+  position: absolute;
  visibility: hidden;
  float: left;
- bottom: -300px;
+ top: -300px;
  left: 0px;
- height: 300px;
- width: 166px;
+ height: 0px;
+ width: 0px;
  margin: none;
- z-index: 109;
- border-top-right-radius: 30px;
- border-top-left-radius: 30px;
+ z-index: -1;
  transition: all .25s;
  background-color: #d2d2d2;
 }
 
 
   .activated{
-  position: absolute;
   visibility: visible;
   float: left;
-  bottom: 0px;
-  left: 0%;
+  top: 0px;
+  left: -200px;
   height: 300px;
-  width: 166px;
+  width: 200px;
   margin: none;
+  z-index: -1100;
   background-color: #d2d2d2;
 }
+
 
 .overlay-toggle{
   overflow: scroll;
@@ -1297,6 +1297,13 @@ z-index: 100;
 
 /*SMALL SCREEN*/
 @media (max-width: 768px) {
+
+  .item.active{
+  display: inline-block;
+  z-index: 100;
+  overflow: visible;
+  cursor: zoom-in;
+}
 
   .info{
   float: left;
@@ -1316,7 +1323,7 @@ z-index: 100;
   opacity: .9;
   width: 30px;
   height: 30px;
-  margin: 5px 40px 5px 40px;
+  margin: 5px 5px 5px 40px;
   top: 0%;
   background-image: url("../assets/closer.svg");
   background-size: contain;
@@ -1378,12 +1385,14 @@ z-index: 100;
     display: none;
   }
 
-  .top-nav-var-sm{
-    position: relative;
-    display: block;
+  .top-nav-car{
+    display: inline-block;
+    left: 0px;
     width: 100%;
-    height: 60px;
+    height: auto;
+    z-index: 109;
     background-color: white;
+    overflow: hidden;
   }
 
  
@@ -1398,16 +1407,14 @@ z-index: 100;
  position: absolute;
  visibility: hidden;
  float: left;
- bottom: -300px;
+ top: 40px;
  left: 0px;
- height: 300px;
- width: 166px;
- margin: none;
- z-index: 109;
- border-top-right-radius: 30px;
- border-top-left-radius: 30px;
- transition: all .25s;
- background-color: #d2d2d2;
+ height: 0px;
+ width: 100%;
+ z-index: 101;
+ border-bottom-right-radius: 30px;
+ border-bottom-left-radius: 30px;
+ transition: top .25s;
 }
 
 
@@ -1415,12 +1422,12 @@ z-index: 100;
   position: absolute;
   visibility: visible;
   float: left;
-  bottom: 0px;
+  top: 40px;
   left: 0%;
   height: 300px;
-  width: 166px;
-  margin: none;
-  background-color: #d2d2d2;
+  width: 100%;
+  z-index: 101;
+  background-color: white;
 }
 
 .overlay-toggle{
