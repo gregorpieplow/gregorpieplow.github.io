@@ -886,8 +886,8 @@ z-index: 100;
 .loading{
     position: absolute;
     display: none;
-    left:50%;
-    top:50%;
+    left: 45%;
+    top: 42%;
     width: 100px;
     height: 100px;
     background-image:  url("../assets/load_small.gif");
