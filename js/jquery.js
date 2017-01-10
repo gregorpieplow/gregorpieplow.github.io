@@ -174,7 +174,12 @@ $(".carousel").carousel({
 
 $(".back-arrow").on("click", function () {
     var totalItems = $(".info-box").length;
-    var shift = 70;
+    if ($(".top-nav-car").css("display") === "none"){
+                    var shift = 70;
+                }
+                else{
+                    var shift = 0;
+                };
     $(".info-box").each(function(i){
         if ($("#car-info-item-"+(i+1)).hasClass("active-info")){
          if ($("#car-info-item-"+(i+1)).hasClass("active-info") && i == 0){
@@ -208,7 +213,12 @@ $(".back-arrow").on("click", function () {
 });
 
 $(".forward-arrow").on("click", function () {
-   var shift = 70;
+   if ($(".top-nav-car").css("display") === "none"){
+                    var shift = 70;
+                }
+                else{
+                    var shift = 0;
+                };
    var totalItems = $(".info-box").length;
    $(".info-box").each(function(i){
    if ($("#car-info-item-"+(i+1)).hasClass("active-info")){
@@ -246,17 +256,23 @@ $(".forward-arrow").on("click", function () {
 var clicks = false;
 
 $(".info").click(function(){
- var clicks = $(this).data('clicks');
+if ($(".top-nav-car").css("display") === "none"){
+                    var itemActiveShift = 70;
+                }
+                else{
+                    var itemActiveShift = 0;
+                };
+            var clicks = $(this).data('clicks');
            
             if (clicks) { 
                 $(".info-box").css("transition","all .25s");
                 $(".info-box.active-info").removeClass("activated"); 
-                $(".item.active").animate({"left" :  "-=70px"} , {duration: 250, speacialEasing: {"left" :"easeInEaseOut"}});
+                $(".item.active").animate({"left" :  "-=" + itemActiveShift +"px"} , {duration: 250, speacialEasing: {"left" :"easeInEaseOut"}});
             }
             else { 
                 $(".info-box").css("transition","all .25s");
                 $(".info-box.active-info").addClass("activated"); 
-                $(".item.active").animate({"left" : "70px"} , {duration: 250, queue: false});
+                $(".item.active").animate({"left" : itemActiveShift + "px"} , {duration: 250, queue: false});
             }
             $(this).data("clicks", !clicks);
 });
@@ -404,11 +420,11 @@ $(function() {
             $('.item.active').removeClass('zoom-item');
             $('.item.active').animate({"height" : thisDivHeight / 3 + "px"} , {duration: 100, queue: false});
             $('.item.active').animate({"width" : thisDivHeight / 3 /ratio + "px"} , {duration: 100, queue: false});
-            if ($(".top-nav-car").css("display","none")){
+            if ($(".s-indicator").css("display")==="none"){
             $(".back-car").show();
             $(".forward-car").show();
             }else{
-            $(".top-nav-car").show();
+            $(".top-nav-car").css("display","inline-block");
             };
             }
             else { 
@@ -425,7 +441,7 @@ $(function() {
             $(".back-car").hide();
             $(".forward-car").hide();
             $(".info-box").removeClass("activated");
-            $(".top-nav-car").hide();
+            $(".top-nav-car").css("display","none");
             };
             $(this).data("clicks", !clicks2);
         }
@@ -444,7 +460,7 @@ $(".zoom-closer").click(function(){
             $('.item.active').removeClass('zoom-item');
             $('.item.active').animate({"height" : thisDivHeight / 3 + "px"} , {duration: 100, queue: false});
             $('.item.active').animate({"width" : thisDivHeight / 3 /ratio + "px"} , {duration: 100, queue: false});
-            if ($(".top-nav-car").css("display","none")){
+            if ($(".top-nav-car").css("display")==="none"){
             $(".back-car").show();
             $(".forward-car").show();
             }else{

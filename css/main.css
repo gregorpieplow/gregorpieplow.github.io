@@ -1298,6 +1298,11 @@ z-index: 100;
   overflow: scroll;
 }
 
+.s-indicator{
+  display: none;
+  height: 0px;
+  width: 0px;
+}
 
 }
 
@@ -1413,7 +1418,7 @@ z-index: 100;
  position: absolute;
  visibility: hidden;
  float: left;
- top: 40px;
+ top: 0px;
  left: 0px;
  height: 0px;
  width: 100%;
@@ -1428,7 +1433,7 @@ z-index: 100;
   position: absolute;
   visibility: visible;
   float: left;
-  top: 40px;
+  top: 0px;
   left: 0%;
   height: 300px;
   width: 100%;
@@ -1438,6 +1443,12 @@ z-index: 100;
 
 .overlay-toggle{
   overflow: scroll;
+}
+
+.s-indicator{
+  display: block;
+  height: 0px;
+  width: 0px;
 }
 
 }
