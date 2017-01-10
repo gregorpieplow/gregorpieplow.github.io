@@ -895,21 +895,7 @@ z-index: 100;
     z-index: 2000;
   }
 
-.zoom-closer{
-  position: fixed;
-  display: none;
-  float: right;
-  margin-left: 97%;
-  margin-top: 15px; 
-  opacity: 1;
-  height: 25px;
-  width: 25px;
-  background-image: url("../assets/closer.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: .2s;
-  z-index: 121;
-}
+
 
 
 
@@ -1198,6 +1184,22 @@ z-index: 100;
   transition: .2s;
 }
 
+.zoom-closer{
+  position: fixed;
+  display: none;
+  float: right;
+  margin-left: 97%;
+  margin-top: 15px; 
+  opacity: 1;
+  height: 25px;
+  width: 25px;
+  background-image: url("../assets/closer.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: .2s;
+  z-index: 121;
+}
+
    .back-car{
     display: block;
     float: left;
@@ -1340,6 +1342,22 @@ z-index: 100;
   background-size: contain;
   background-repeat: no-repeat;
   transition: .2s;
+}
+
+.zoom-closer{
+  position: fixed;
+  display: none;
+  float: right;
+  margin-left: 90%;
+  margin-top: 15px; 
+  opacity: 1;
+  height: 25px;
+  width: 25px;
+  background-image: url("../assets/closer.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: .2s;
+  z-index: 121;
 }
 
  .back-arrow-link{

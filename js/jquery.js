@@ -312,10 +312,10 @@ if (image_url[1]) {
         var h = image.height;
         var w = image.width;
         var ratio =  w / h;
-        if ( window.innerWidth >= window.innerHeight){
+    if ( $(".s-indicator").css("display") === "none" ){
             var activeDivHeight =  window.innerHeight;
             var activeDivWidth = activeDivHeight * ratio; 
-            if (activeDivWidth+400 >= window.innerWidth){
+            if (activeDivWidth+300 >= window.innerWidth){
                 $("#car-item-"+(i+1)).css({height : (window.innerWidth * .86-210)/ratio+"px", 
                 width : window.innerWidth * .86-210+"px", top : "50%", transform: "translateY(-50%)", transition: "none"});    
             }else{
@@ -460,7 +460,7 @@ $(".zoom-closer").click(function(){
             $('.item.active').removeClass('zoom-item');
             $('.item.active').animate({"height" : thisDivHeight / 3 + "px"} , {duration: 100, queue: false});
             $('.item.active').animate({"width" : thisDivHeight / 3 /ratio + "px"} , {duration: 100, queue: false});
-            if ($(".top-nav-car").css("display")==="none"){
+            if ($(".s-indicator").css("display") ==="none"){
             $(".back-car").show();
             $(".forward-car").show();
             }else{
