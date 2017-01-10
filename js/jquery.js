@@ -26,8 +26,6 @@ $(function () {
     $(this).toggleClass('button-open');
   });
 
-
-
 //small nav menu button functionality
 
 
@@ -245,6 +243,7 @@ $(".forward-arrow").on("click", function () {
    });
 });
 
+var clicks = false;
 
 $(".info").click(function(){
  var clicks = $(this).data('clicks');
@@ -321,15 +320,21 @@ if (image_url[1]) {
 };
 
 
-// here I detect weather i long or short click on an image
-
 $(".zoom-closer").click(function(){
-$(".image-car").removeClass("zoom");  
-$(".closertop").removeClass("closertop-shift").delay(1500).removeClass("hidden-xs hidden-sm hidden-md hidden-lg");  
-$(".carousel-house").removeClass("col-lg-12 col-md-12 col-sm-12").removeClass("carousel-house-shift").addClass("col-lg-11 col-md-11 col-sm-11");
-$(".overlay").removeClass("overlay-zoom");
-$(".item").removeClass("item-marg-shift");
-$(".zoom-closer").toggle();
+            var thisDivHeight = $(".item.active").height();
+            var thisDivWidth =  $(".item.active").width();
+            var ratio = thisDivHeight / thisDivWidth;
+            $('.zoom-closer').hide();
+            $('.overlay-wrapper').removeClass('overlay-toggle');  
+            $('.item.active').removeClass('zoom-item');
+            $('.item.active').animate({"height" : thisDivHeight / 3 + "px"} , {duration: 100, queue: false});
+            $('.item.active').animate({"width" : thisDivHeight / 3 /ratio + "px"} , {duration: 100, queue: false});
+            if ($(".top-nav-car").css("display","none")){
+            $(".back-car").show();
+            $(".forward-car").show();
+            }else{
+            $(".top-nav-car").show();
+            };
 });
 
 
@@ -410,6 +415,7 @@ $(function() {
             var thisDivWidth =  $(this).width();
             var ratio = thisDivHeight / thisDivWidth;
             if (clicks2) { 
+            $('.zoom-closer').hide();
             $('.overlay-wrapper').removeClass('overlay-toggle');  
             $('.item.active').removeClass('zoom-item');
             $('.item.active').animate({"height" : thisDivHeight / 3 + "px"} , {duration: 100, queue: false});
@@ -422,6 +428,7 @@ $(function() {
             };
             }
             else { 
+            $('.zoom-closer').show();
             $('.overlay-wrapper').addClass('overlay-toggle');  
             $('.item.active').addClass('zoom-item');
             if ($(".info-box").hasClass("activated")){
