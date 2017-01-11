@@ -1144,7 +1144,7 @@ z-index: 100;
 /*CAROUSEL RESPONSIVE ELEMENTS*/
 /*BIG SCREEN*/
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 
     .top-nav-car{
     display: none;

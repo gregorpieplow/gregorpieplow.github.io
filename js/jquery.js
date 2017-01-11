@@ -323,7 +323,7 @@ if (image_url[1]) {
         };
         }
         else{
-            var activeDivWidth = window.innerWidth; 
+            var activeDivWidth = window.innerWidth*.99; 
             var activeDivHeight =  activeDivWidth / ratio;
             $("#car-item-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
         }
