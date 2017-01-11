@@ -413,13 +413,15 @@ $(function() {
             $('.zoom-closer').hide();
             $('.overlay-wrapper').removeClass('overlay-toggle');  
             $('.item.active').removeClass('zoom-item');
-            $('.item.active').animate({"height" : thisDivHeight / 3 + "px"} , {duration: 100, queue: false});
-            $('.item.active').animate({"width" : thisDivHeight / 3 /ratio + "px"} , {duration: 100, queue: false});
             if ($(".s-indicator").css("display")==="none"){
-            $(".back-car").show();
-            $(".forward-car").show();
+                $('.item.active').animate({"height" : thisDivHeight / 2.7 + "px"} , {duration: 100, queue: false});
+                $('.item.active').animate({"width" : thisDivHeight / 2.7 /ratio + "px"} , {duration: 100, queue: false});
+                $(".back-car").show();
+                $(".forward-car").show();
             }else{
-            $(".top-nav-car").css("display","inline-block");
+                $('.item.active').animate({"height" : thisDivHeight / 3 + "px"} , {duration: 100, queue: false});
+                $('.item.active').animate({"width" : thisDivHeight / 3 /ratio + "px"} , {duration: 100, queue: false});
+                $(".top-nav-car").css("display","inline-block");
             };
             }
             else { 
@@ -427,7 +429,11 @@ $(function() {
             // if display is big overlay toggle
             if ($(".s-indicator").css("display") ==="none"){
                 $('.overlay-wrapper').addClass('overlay-toggle');  
+                $('.item.active').animate({"height" : thisDivHeight * 2.7 + "px"} , {duration: 100, queue: false});
+                $('.item.active').animate({"width" : thisDivHeight * 2.7 /ratio + "px"} , {duration: 100, queue: false});
             }else{
+                $('.item.active').animate({"height" : thisDivHeight * 3 + "px"} , {duration: 100, queue: false});
+                $('.item.active').animate({"width" : thisDivHeight * 3 /ratio + "px"} , {duration: 100, queue: false});
             };
             $('.item.active').addClass('zoom-item');
             if ($(".info-box").hasClass("activated")){
@@ -435,8 +441,7 @@ $(function() {
                 $(".item.active").css("left","0px");
                 $(".info").data("clicks", !clicks);
             }else{};
-            $('.item.active').animate({"height" : thisDivHeight * 3 + "px"} , {duration: 100, queue: false});
-            $('.item.active').animate({"width" : thisDivHeight * 3 /ratio + "px"} , {duration: 100, queue: false});
+           
             $(".back-car").hide();
             $(".forward-car").hide();
             $(".info-box").removeClass("activated");
