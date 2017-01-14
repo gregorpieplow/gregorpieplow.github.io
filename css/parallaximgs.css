@@ -20,6 +20,7 @@ ul {
 
     #parallax-img-big{
         transform: scale(.56,.56);
+        -webkit-transform: scale(.56,.56);
         margin-left: -30%;
         margin-top: -70px;
     }
@@ -215,6 +216,7 @@ ul {
 
     #parallax-img-big{
         transform: scale(.5,.5);
+        -webkit-transform: scale(.5,.5);
         margin-top: -10%;
         margin-left: -40%;
     }
@@ -414,6 +416,7 @@ ul {
 
  #parallax-img-small{
         transform: scale(.8,.8);
+        -webkit-transform: scale(.8,.8);
         margin-left: -25%;
         margin-top: 0%;
     }
