@@ -47,9 +47,11 @@ $(document).on("scroll", function () {
     var $menuButton = $('.navbar-sidebar-header-menu');
     if($(document).scrollTop() > 10){
         $menuButton.addClass("scroll");
+        $(".whitebar-scroll").addClass("wh-scroll");
     }
     else{
         $menuButton.removeClass("scroll");
+         $(".whitebar-scroll").removeClass("wh-scroll");
     }
 });
 //Navbar position
@@ -172,21 +174,6 @@ function scribbleresize() {
 // );
 
 //loading images
-
-var nImages = $("img").length;
-var loadCounter = 0;
-//binds onload event listner to images
-$("img").on("load", function() {
-    loadCounter++;
-    if(nImages == loadCounter) {
-        $(this).parent().show();
-    }
-}).each(function() {
-
-    // attempt to defeat cases where load event does not fire
-    // on cached images
-    if(this.complete) $(this).trigger("load");
-});
 
 
 /*carousel stuff*/
