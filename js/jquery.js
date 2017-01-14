@@ -52,7 +52,27 @@ $(document).on("scroll", function () {
         $menuButton.removeClass("scroll");
     }
 });
+//Navbar position
 
+$(function(){
+     if ($(window).innerHeight() <= 645){
+        $(".nav-sidebar").css("position","relative");
+    }else{
+         $(".nav-sidebar").css("position","fixed");
+    };
+});
+
+$(window).resize(function() {
+    if ($("#small-nav").css("display")=="none"){
+    if ($(window).innerHeight() <= 645){
+        $(".nav-sidebar").css("position","relative");
+    }else{
+         $(".nav-sidebar").css("position","fixed");
+    };
+    }else{
+
+    };
+});
 
 // navbar svg click
 

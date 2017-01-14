@@ -13,7 +13,6 @@
   box-sizing: border-box;
 }
 
-
 /*bootstrap changes*/
 
 nav li a:hover {
@@ -457,6 +456,8 @@ z-index: 100;
     display: none;
   }
 
+
+
   .nav > li {
     box-sizing: border-box;
     display: inline;
@@ -596,13 +597,16 @@ z-index: 100;
   margin: 7px;
 }*/
 
+.nav-sidebar{
+  position: fixed;
+}
+
   #small-nav{
     display: none;
   }
   .nav > li {
     box-sizing: border-box;
-   }
-  
+   } 
 
   #brand-logo{
     display: none;
@@ -1172,7 +1176,7 @@ z-index: 100;
   height: 30px;
   width: 30px;
   left: 20%;
-  top: 5%;
+  top: 2%;
   background-image: url("../assets/info.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -1181,7 +1185,7 @@ z-index: 100;
 
   .closer{
   position: relative;
-  top:5%;
+  top:2%;
   left: 38%;
   opacity: .9;
   height: 30px;
