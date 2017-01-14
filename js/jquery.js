@@ -171,6 +171,24 @@ function scribbleresize() {
 // }
 // );
 
+//loading images
+
+var nImages = $("img").length;
+var loadCounter = 0;
+//binds onload event listner to images
+$("img").on("load", function() {
+    loadCounter++;
+    if(nImages == loadCounter) {
+        $(this).parent().show();
+    }
+}).each(function() {
+
+    // attempt to defeat cases where load event does not fire
+    // on cached images
+    if(this.complete) $(this).trigger("load");
+});
+
+
 /*carousel stuff*/
 
 
