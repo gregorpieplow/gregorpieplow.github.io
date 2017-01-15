@@ -54,25 +54,30 @@ $(document).on("scroll", function () {
          $(".whitebar-scroll").removeClass("wh-scroll");
     }
 });
-//Navbar position
+
+// Navbar position
 
 $(function(){
+    if ($(".nav-size-ind").css("display")=="block"){
+    }else{
      if ($("#art").innerHeight() <= 645){
         $(".nav-sidebar").css("position","relative");
+    console.log("hi");
     }else{
          $(".nav-sidebar").css("position","fixed");
     };
+    };
 });
 
-$("#art").resize(function() {
-    if ($("#small-nav").css("display")=="none"){
+$(window).resize(function() {
+    if ($(".nav-size-ind").css("display")=="block"){
+        $(".nav-sidebar").css("position","relative");
+    }else{
     if ($(window).innerHeight() <= 645){
         $(".nav-sidebar").css("position","relative");
     }else{
          $(".nav-sidebar").css("position","fixed");
     };
-    }else{
-
     };
 });
 
