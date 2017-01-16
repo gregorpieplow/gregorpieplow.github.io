@@ -73,7 +73,7 @@ $(window).resize(function() {
     if ($(".nav-size-ind").css("display")=="block"){
         $(".nav-sidebar").css("position","relative");
     }else{
-    if ($(window).innerHeight() <= 645){
+    if ($("#art").innerHeight() <= 645){
         $(".nav-sidebar").css("position","relative");
     }else{
          $(".nav-sidebar").css("position","fixed");
