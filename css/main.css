@@ -1254,6 +1254,10 @@ z-index: 100;
 
 @media (min-width: 769px) {
 
+  .overlay-toggle{
+  overflow: scroll;
+}
+
   .top-nav-car{
     display: none;
   }
@@ -1414,10 +1418,6 @@ z-index: 100;
 }
 
 
-.overlay-toggle{
-  overflow: scroll;
-}
-
 .s-indicator{
   display: none;
   height: 0px;
@@ -1438,6 +1438,7 @@ z-index: 100;
 
 /*SMALL SCREEN*/
 @media (max-width: 768px) {
+
 
   .item.active{
   display: inline-block;
@@ -1600,7 +1601,7 @@ z-index: 100;
 }
 
 .overlay-toggle{
-  overflow: scroll;
+  overflow: visible;
 }
 
 .s-indicator{

@@ -200,8 +200,13 @@ $(".thumbnail-gal").click(function(){
     $("footer").hide(0);
     if ($(".nav-size-ind-2").css("display") == "none"){
        $("#small-nav").hide();
+       $(".top-nav-car").show();
+       $(".back-car").hide();
+       $(".forward-car").hide();
    }else if ($(".nav-size-ind-2").css("display") == "block"){
        $(".nav-sidebar").hide();
+       $(".back-car").show();
+       $(".forward-car").show();
    };
     $("#car-"+this.id).addClass("active");
     $("#car-info-"+this.id).addClass("active-info");
@@ -356,14 +361,19 @@ $(window).resize(function() {
        $(".back-car").show();
        $(".forward-car").show();
        $(".top-nav-car").hide();
+       divCarSizeReSize();
    }
    else if ($(".s-indicator").css("display")=="block" & $(".s-indicator").hasClass("overlay-active") & !$('.overlay-wrapper').hasClass('overlay-toggle')){
        $(".top-nav-car").css("display","inline-block");
        $(".back-car").hide();
        $(".forward-car").hide();
+       $(".item").each(function() {$(".item").css({top : "0%", transform: "translateY(0%)"});});
+       divCarSizeReSize()
+   }
+   else{
+
    };
 });
-
 
 // setting the sizes of all the carousel divs
 
@@ -389,6 +399,44 @@ if (image_url[1]) {
             if (activeDivWidth+300 >= window.innerWidth){
                 $("#car-item-"+(i+1)).css({height : (window.innerWidth * .86-210)/ratio+"px", 
                 width : window.innerWidth * .86-210+"px", top : "50%", transform: "translateY(-50%)", transition: "none"});    
+            }else{
+            $("#car-item-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
+        };
+        }
+        else{
+            var activeDivWidth = window.innerWidth*.99; 
+            var activeDivHeight =  activeDivWidth / ratio;
+            $("#car-item-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
+        }
+        });   
+    image.src = image_url;
+    };
+    }
+)
+};
+
+function divCarSizeReSize() {
+    $(".item").each(function(i){
+    var image_url = $(this).css('background-image'),
+    image;
+// Remove url() or in case of Chrome url("")
+image_url = image_url.match(/^url\("?(.+?)"?\)$/);
+
+if (image_url[1]) {
+    image_url = image_url[1];
+    image = new Image();
+
+    // just in case it is not already loaded
+    $(image).load(function () {
+        var h = image.height;
+        var w = image.width;
+        var ratio =  w / h;
+    if ( $(".s-indicator").css("display") === "none" ){
+            var activeDivHeight =  window.innerHeight;
+            var activeDivWidth = activeDivHeight * ratio; 
+            if (activeDivWidth+300 >= window.innerWidth){
+                $("#car-item-"+(i+1)).css({height : (window.innerWidth * .86-210)/ratio+"px", 
+                width : window.innerWidth * .86-210+"px", top : "50%", transform: "translateY(-50%)"});    
             }else{
             $("#car-item-"+(i+1)).css({height : activeDivHeight+"px", width : activeDivWidth+"px"});
         };
@@ -503,6 +551,7 @@ $(function() {
                 $('.item.active').animate({"height" : thisDivHeight * 2.7 + "px"} , {duration: 100, queue: false});
                 $('.item.active').animate({"width" : thisDivHeight * 2.7 /ratio + "px"} , {duration: 100, queue: false});
             }else{
+                $('.overlay-wrapper').addClass('overlay-toggle');  
                 $('.item.active').animate({"height" : thisDivHeight * 3 + "px"} , {duration: 100, queue: false});
                 $('.item.active').animate({"width" : thisDivHeight * 3 /ratio + "px"} , {duration: 100, queue: false});
             };
