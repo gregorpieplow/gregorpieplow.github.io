@@ -989,10 +989,6 @@ z-index: 100;
   }
 
 
-
-
-
-
 .closer:hover {
   opacity: 1;
 }
@@ -1004,6 +1000,9 @@ z-index: 100;
 
 
 @media (min-width: 992px) {
+  #art{
+    overflow-x: hidden;
+  }
   .gallery{
   position: relative;
   top: 36px;
@@ -1720,11 +1719,15 @@ z-index: 100;
 }
 
 .copyright-art{
+  font-size: 10pt;
   font-family: "Josefin Slab", serif;
   position: relative;
+  display: block;
   height: 30px;
   top: 120px;
-  width: 80%;
+  width: 270px;
+  margin: none;
+  padding: none;
 }
 
 
