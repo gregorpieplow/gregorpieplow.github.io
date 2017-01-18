@@ -1254,7 +1254,7 @@ z-index: 100;
 
 @media (min-width: 769px) {
 
-    .top-nav-car{
+  .top-nav-car{
     display: none;
   }
 
@@ -1290,6 +1290,7 @@ z-index: 100;
   background-size: contain;
   background-repeat: no-repeat;
   transition: .2s;
+  z-index: 10;
 }
 
 .zoom-closer{
@@ -1469,6 +1470,7 @@ z-index: 100;
   background-size: contain;
   background-repeat: no-repeat;
   transition: .2s;
+  z-index: 10;
 }
 
 .zoom-closer{
