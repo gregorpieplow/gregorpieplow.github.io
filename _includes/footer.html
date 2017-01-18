@@ -1,44 +1,88 @@
 <footer class="site-footer">
 
-  <div class="wrapper">
+    <div class="container-fluid">
+      
+      <div class="row">
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+         <div id="f-empty" class="col-lg-2 col-md-2 hidden-sm hidden-xs">
+          </div>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
+       
+        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12 col-12"> 
+          
+
+          <div id="f-social" class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12 footer-styling">
+
+            <h1> social </h1>
+            <a href="#"> <div class="facebook social-icn"></div> </a>
+            <a href="#"> <div class="instagram social-icn"></div> </a>
+            <a href="#"> <div class="tumblr social-icn"></div> </a>
+            
+          </div>
+
+          <div id="f-impressum" class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12 footer-styling">
+            
+            <h1> impressum </h1>
+            <p> <a href="www.gregorpieplow.com"> www.gregorpieplow.com</a> </p>
+            <p> 
+                All images &#169; 2006-2017 Gregor Pieplow All <br> rights reserved. 
+                No part of this site may be <br> copied,  stored or used 
+                for any reason without <br> written permission of Gregor Pieplow. 
+            </p>
+            
+            <h4> responsible for design and content: </h4>
+            <p>Gregor Pieplow <br>
+             Plaza de los Mostenses 11 <br>
+             28015 Madrid <br>
+             Spain </p>
+             
+
+          </div>
+
+          <div id="f-contact" class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12 footer-styling">
+              <h1>  contact </h1>
+              <p> <a href="mailto:{{ site.email }}">{{ site.email }}</a> </p>
+          
+          </div>
+
+
+          
+
+        </div>
+
+      </div>
+    
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+<!--{{ site.title | escape }}
+
             {% if site.author %}
               {{ site.author | escape }}
             {% else %}
               {{ site.title | escape }}
             {% endif %}
-            </li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
+            
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+     
           {% if site.github_username %}
-          <li>
+         
             {% include icon-github.html username=site.github_username %}
-          </li>
+          
           {% endif %}
 
           {% if site.twitter_username %}
-          <li>
+        
             {% include icon-twitter.html username=site.twitter_username %}
-          </li>
+       
           {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
+       
         <p>{{ site.description | escape }}</p>
-      </div>
-    </div>
-
-  </div>
-
-</footer>
+      -->

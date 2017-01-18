@@ -70,6 +70,12 @@ nav li a:hover {
 
 @media (max-width: 576px){
 
+  .nav-size-ind-2{
+    display: none;
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+  }
 
 #small-nav{
 z-index: 100;
@@ -264,6 +270,13 @@ z-index: 100;
 /*small screen*/
 
 @media (min-width: 576px) and (max-width: 768px){
+
+    .nav-size-ind-2{
+    display: none;
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+  }
    
    
 /*.social-media{
@@ -479,6 +492,13 @@ z-index: 100;
     visibility: hidden;
   }
 
+  .nav-size-ind-2{
+    display: block;
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+  }
+
    /*.social-media{
   position: absolute;
   height: 25px;
@@ -498,6 +518,7 @@ z-index: 100;
 
   #small-nav{
     display: none;
+    z-index: 0;
   }
 
 
@@ -623,6 +644,13 @@ z-index: 100;
 
 @media (min-width: 992px){
 
+ .nav-size-ind-2{
+    display: block;
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+  }
+
 /*social media*/
 
   /*.social-media{
@@ -654,6 +682,7 @@ z-index: 100;
 
   #small-nav{
     display: none;
+    z-index: 0;
   }
   .nav > li {
     box-sizing: border-box;
@@ -1058,13 +1087,29 @@ z-index: 100;
 
 /*social media*/
 
+.social-icn{
+  display: block;
+  position: relative;
+  top: 13px;
+  height: 40px;
+  width: 40px;
+  margin-right: 13px;
+  margin-top: 13px;  
+  float: left;
+  background-size: contain;
+  opacity: .6;
+}
+
+.social-icn:hover{
+  opacity: .9;
+}
 
 .facebook{
   background-image: url("../assets/facebook.svg");
 }
 
-.twitter {
- background-image: url("../assets/twitter.svg");
+.tumblr {
+ background-image: url("../assets/tumblr.svg");
 }
 
 .instagram {
@@ -1379,6 +1424,16 @@ z-index: 100;
   width: 0px;
 }
 
+.copyright-art-overlay{
+  font-family: "Josefin Slab", serif;
+  font-size: 10pt;
+  position: absolute;
+  left: 15px;
+  height: 30px;
+  width: 80%;
+  top: 90%;
+}
+
 }
 
 /*SMALL SCREEN*/
@@ -1553,16 +1608,126 @@ z-index: 100;
   width: 0px;
 }
 
+.copyright-art-overlay{
+  font-family: "Josefin Slab", serif;
+  font-size: 10pt;
+  position: relative;
+  left: 15px;
+  height: 30px;
+  width: 100px;
+  left: 90%;
+  transform: translateX(-90%);
+  -webkit-transform: translateX(-90%);
+  top:-40px;
+}
+
 }
 
 /*Footer*/
 
-.site-footer{
+@media (min-width: 992px) {
+
+  .site-footer{
   position: relative;
   display: block;
   float: right;
-  top: 200px;
-  height: 300px;
+  top: 320px;
+  height: 200px;
   width: 100%;
+  
 }
+  
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+  .site-footer{
+  position: relative;
+  display: block;
+  float: right;
+  top: 720px;
+  height: 200px;
+  width: 100%;
+  
+}
+
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+
+  .site-footer{
+  position: relative;
+  display: block;
+  float: right;
+  top: 820px;
+  height: 200px;
+  width: 100%;
+  
+}
+
+}
+
+@media (max-width: 576px) {
+
+  .site-footer{
+  position: relative;
+  display: block;
+  float: right;
+  top: 420px;
+  height: 200px;
+  width: 100%;
+  
+}
+
+}
+
+
+
+#f-social{
+  height: 150px;
+  /*background: lightyellow;*/
+}
+
+.footer-styling h1{
+  /*font-family: 'Amatica SC', sans-serif;*/
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.footer-styling h4{
+  font-family: "Open Sans Condensed", sans-serif;
+  /*font-family: 'Amatica SC', sans-serif;*/
+}
+
+.footer-styling p{
+  font-family: "Josefin Slab", serif;
+}
+
+#f-copyright{
+  height: 200px;
+  /*background: lightsteelblue;*/
+}
+
+#f-contact{
+  height: 200px;
+  /*background: lightslategray;*/
+}
+
+
+
+.copyright{
+  height: 40px;
+  /*background: darkslateblue;*/
+}
+
+.copyright-art{
+  font-family: "Josefin Slab", serif;
+  position: relative;
+  height: 30px;
+  top: 120px;
+  width: 80%;
+}
+
+
+
+
 
