@@ -194,13 +194,11 @@ function scribbleresize() {
 
 $(".thumbnail-gal").click(function(){
     $(".overlay").show(0);
-    $(".overlay").addClass("active-ov");
     $(".overlay-wrapper").show(0);
     $(".gallery").hide(0);
     $("footer").hide(0);
     if ($(".nav-size-ind-2").css("display") == "none"){
        $("#small-nav").hide();
-       console.log("what");
    }else if ($(".nav-size-ind-2").css("display") == "block"){
        $(".nav-sidebar").hide();
    };
@@ -328,7 +326,6 @@ $(".closer").click(function () {
         $(".item.active").css("left","0px");
         $(".info").data("clicks", !clicks);
     }else{};
-    $(".overlay").removeClass("active-ov");
    $(".overlay").hide(); 
    $(".overlay-wrapper").hide();
    $(".gallery").show();
@@ -346,17 +343,13 @@ $(".closer").click(function () {
 });
 
 $(window).resize(function() {
-    if (!$(".overlay").hasClass("active-ov")){
     if ($(".nav-size-ind-2").css("display") == "block"){
        $(".nav-sidebar").show();
        $("#small-nav").hide();
-       console.log("deine");
    }else if($(".nav-size-ind-2").css("display") == "none"){
        $("#small-nav").show();
        $(".nav-sidebar").hide();
-       console.log("fugga");
    };
-};
 });
 
 
