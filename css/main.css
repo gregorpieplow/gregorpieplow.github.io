@@ -1915,3 +1915,21 @@ z-index: 100;
 }
 
 
+#myDivId{
+  position: relative;
+  top: 26px;
+  height: 900px;
+}
+
+#myDivId img{
+  margin: 20px;
+}
+
+.blog-post{
+  display: inline-block;
+  position: relative;
+  height: 400px;
+  width: 400px;
+  margin: 10px;
+  background-size: cover;
+}

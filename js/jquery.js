@@ -61,7 +61,7 @@ $(function(){
     if ($(".nav-size-ind").css("display")=="block"){
         $(".nav-sidebar").css("position","relative");
     }else{
-     if ($("body").is("#art")){
+     if ($("body").is("#art") || $("body").is("#blog")){
      if ($(window).innerHeight() <= 645){
         $(".nav-sidebar").css("position","relative");
     }else{
@@ -72,7 +72,7 @@ $(function(){
 });
 
 $(function() {
-if ($("body").is("#art")) {
+if ($("body").is("#art")|| $("body").is("#blog")) {
 $(window).resize(function() {
     if ($(".nav-size-ind").css("display")=="block"){
         $(".nav-sidebar").css("position","relative");    
@@ -593,3 +593,67 @@ $(".zoom-closer").click(function(){
                 $(".top-nav-car").css("display","inline-block");
             };
 });
+
+
+// tumblr posts
+
+$(document).ready(function() {
+	
+	//Store given consumer key
+	var client =  'jZnpHgHtx3uCrPdz9ppuLTo3yAH4xbgU8vsYbmmIsJQ3lPsm7u';
+  
+		
+	// click function 		 
+		 // get value from textbox
+		 var urlTumblrRaw = "http://mikroversum.tumblr.com";
+		 // getting rid of http protocol sintax 
+		 var urlTumblr = urlTumblrRaw.replace(/.*?:\/\//g, "");
+		 
+		 
+		 
+		 //run ajax call and pass parameter from search
+		 $.ajax({
+			 // creating the url to access the endpoing. The variable with the blog
+			 // url goes once more under regex to make sure no character is being pass
+			 // that might stop the ajax call
+			 url: 'http://api.tumblr.com/v2/blog/' + urlTumblr.replace('/', '') + '/posts',
+			 method: 'get',
+			 // make sure to use jsonp. It is a requirement to consume the Tumblr api
+			 dataType: "jsonp",
+			 data: ({ api_key: client}),
+			 // upon sucess exceute the following code
+			 success: function(data){
+
+					 console.log(data);
+                     var objectBlog = data.response.blog;
+					 var objectPosts = data.response.posts;
+                     var i = 0;                     
+
+                   	$.each(objectPosts, function(key, value){
+						//just retrieving post that have photos
+						if(value.type === "photo"){
+							// inner each loop to go through all the photos for each post
+							$.each(value.photos, function(k, v){
+                            console.log(i);
+                                    i++;
+
+                                    $("head style").append('#blog-post-'+i+' {background-image: url("'+ v.original_size.url +'")}');
+									//append image
+									$('#myDivId').append(
+										//'<img src="' + v.original_size.url + '" width="400" height="300" />'
+                                        '<a href="'+ v.original_size.url +'"><div id="blog-post-'+i+'" class="blog-post"></div></a>'
+									);
+								});// end inner each
+							
+						
+						}
+					});// end each
+					 // check if  input is returning object with data
+					
+				 } // end success function
+			
+			 }); // end ajax call
+		 
+   
+}); // end of document.ready
+
