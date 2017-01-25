@@ -624,7 +624,7 @@ $(document).ready(function() {
 			 // upon sucess exceute the following code
 			 success: function(data){
 
-					 console.log(data);
+					 //console.log(data);
                      var objectBlog = data.response.blog;
 					 var objectPosts = data.response.posts;
                      var i = 0;                     
@@ -634,20 +634,22 @@ $(document).ready(function() {
 						if(value.type === "photo"){
 							// inner each loop to go through all the photos for each post
 							$.each(value.photos, function(k, v){
-                            console.log(i);
                                     i++;
 
                                     $("head style").append('#blog-post-'+i+' {background-image: url("'+ v.original_size.url +'")}');
 									//append image
-									$('#myDivId').append(
+									$('#blogPosts').append(
 										//'<img src="' + v.original_size.url + '" width="400" height="300" />'
                                         '<a href="'+ v.original_size.url +'"><div id="blog-post-'+i+'" class="blog-post"></div></a>'
 									);
 								});// end inner each
-							
 						
 						}
 					});// end each
+                    $('#blogPosts').append(
+										//'<img src="' + v.original_size.url + '" width="400" height="300" />'
+                                        '<div class="copyright-blog"> All Content &#169; 2006-2017 Gregor Pieplow |  <a href="../impressum/index.html">Impressum</a></div>'
+									);
 					 // check if  input is returning object with data
 					
 				 } // end success function

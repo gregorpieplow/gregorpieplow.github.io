@@ -501,7 +501,7 @@ ul {
   } 
 
   #parallax-img-small{
-        transform: scale(.4,.4);
+        transform: scale(.5,.5);
         margin-left: -60%;
         margin-top: 0%;
     }
