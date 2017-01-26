@@ -272,7 +272,7 @@ z-index: 100;
 .blog-post{
   display: inline-block;
   position: relative;
-  height: 500px;
+  height: 300px;
   width: 86%;
   margin: 25px;
   background-size: cover;
