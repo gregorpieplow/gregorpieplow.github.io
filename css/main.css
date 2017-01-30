@@ -70,6 +70,26 @@ nav li a:hover {
 
 @media (max-width: 576px){
 
+  /*Statement*/
+
+#statement-page{
+  display: block;
+  position: relative;
+  left: 30px;
+}
+
+#statement-page h1{
+  font-family: "Amatica SC", sans-serif;
+  font-size: 40pt;
+  text-align: right;
+}
+
+#statement-page p{
+  font-family: "Josefin Slab", serif;
+  font-size: 14pt;
+  text-align: justify;
+}
+
 .impressum{
   top: 100px;
   text-align: center;
@@ -285,6 +305,26 @@ z-index: 100;
 
 @media (min-width: 576px) and (max-width: 768px){
 
+/*Statement*/
+
+#statement-page{
+  display: block;
+  position: relative;
+  left: 30px;
+}
+
+#statement-page h1{
+  font-family: "Amatica SC", sans-serif;
+  font-size: 40pt;
+  text-align: right;
+}
+
+#statement-page p{
+  font-family: "Josefin Slab", serif;
+  font-size: 14pt;
+  text-align: justify;
+}
+
   .impressum{
   top: 100px;
   text-align: center;
@@ -492,6 +532,27 @@ z-index: 100;
 /*medium screen*/
 
 @media(min-width: 768px) and (max-width: 992px){
+/*Statement*/
+
+#statement-page{
+  display: block;
+  position: relative;
+  left: 15px;
+}
+
+#statement-page h1{
+  font-family: "Amatica SC", sans-serif;
+  font-size: 40pt;
+  text-align: right;
+}
+
+#statement-page p{
+  font-family: "Josefin Slab", serif;
+  font-size: 14pt;
+  text-align: justify;
+}
+
+
   .impressum{
   top: 100px;
   text-align: center;
@@ -603,6 +664,26 @@ z-index: 100;
 /*big screen*/
 
 @media (min-width: 992px){
+
+  /*Statement*/
+
+#statement-page{
+  display: block;
+  position: relative;
+  top: 5px;
+}
+
+#statement-page h1{
+  font-family: "Amatica SC", sans-serif;
+  font-size: 40pt;
+  text-align: right;
+}
+
+#statement-page p{
+  font-family: "Josefin Slab", serif;
+  font-size: 14pt;
+  text-align: justify;
+}
 
 .impressum{
   top: 20px;
@@ -1512,7 +1593,15 @@ z-index: 100;
 /*Footer*/
 
 @media (min-width: 992px) {
-
+ .site-footer-2{
+  position: relative;
+  display: block;
+  float: right;
+  top: 100px;
+  height: 80px;
+  width: 100%;
+  
+}
 
 
   .site-footer{
@@ -1582,6 +1671,16 @@ z-index: 100;
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+
+ .site-footer-2{
+  position: relative;
+  display: block;
+  float: right;
+  top: 100px;
+  height: 80px;
+  width: 100%;
+  
+}
 
   .site-footer{
   position: relative;
@@ -1659,6 +1758,15 @@ z-index: 100;
   height:20px;
  }
 
+.small-foot.small-foot-2{
+  position: relative;
+  top: 100px;
+  height: 200px;
+  font-size: 18pt;
+  font-family: "Open Sans Condensed", sans-serif;
+  width: 100%;
+}
+
 .small-foot{
   position: relative;
   top: 850px;
@@ -1711,6 +1819,15 @@ z-index: 100;
   width: 100%;
   height:20px;
  }
+
+.small-foot.small-foot-2{
+  position: relative;
+  top: 100px;
+  height: 200px;
+  font-size: 18pt;
+  font-family: "Open Sans Condensed", sans-serif;
+  width: 100%;
+}
 
 .small-foot{
   position: relative;
@@ -1888,11 +2005,11 @@ border-radius: 3px;
 }
 
 .impressum h1{
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Amatica SC", sans-serif;
 }
 
 .impressum h4{
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Amatica SC", sans-serif;
 }
 
 #blog-post-mikroversum{
@@ -1911,3 +2028,4 @@ border-radius: 3px;
    -webkit-transform: translateY(-50%);
   text-align: center;
 }
+

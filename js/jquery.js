@@ -61,7 +61,7 @@ $(function(){
     if ($(".nav-size-ind").css("display")=="block"){
         $(".nav-sidebar").css("position","relative");
     }else{
-     if ($("body").is("#art") || $("body").is("#blog")){
+     if ($("body").is("#art") || $("body").is("#blog")||$("body").is("#statement")){
      if ($(window).innerHeight() <= 645){
         $(".nav-sidebar").css("position","relative");
     }else{
@@ -72,7 +72,7 @@ $(function(){
 });
 
 $(function() {
-if ($("body").is("#art")|| $("body").is("#blog")) {
+if ($("body").is("#art")|| $("body").is("#blog")||$("body").is("#statement")) {
 $(window).resize(function() {
     if ($(".nav-size-ind").css("display")=="block"){
         $(".nav-sidebar").css("position","relative");    
