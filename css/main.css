@@ -797,7 +797,8 @@ z-index: 100;
 
 #blogPosts{
   position: relative;
-  top: 26px;
+  top: 25px;
+  left: 50px;
   height: 900px;
 }
 
