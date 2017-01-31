@@ -76,11 +76,20 @@ nav li a:hover {
   display: block;
   position: relative;
   left: 30px;
+  font-family: "Josefin Slab", serif;
+  font-size: 14pt;
+  text-align: justify;
 }
 
 #statement-page h1{
   font-family: "Amatica SC", sans-serif;
   font-size: 40pt;
+  text-align: right;
+}
+
+#statement-page h2{
+  font-family: "Amatica SC", sans-serif;
+  font-size: 38pt;
   text-align: right;
 }
 
@@ -311,6 +320,8 @@ z-index: 100;
   display: block;
   position: relative;
   left: 30px;
+  font-size: 15pt;
+  font-family: "Josefin Slab", serif;
 }
 
 #statement-page h1{
@@ -318,6 +329,13 @@ z-index: 100;
   font-size: 40pt;
   text-align: right;
 }
+
+#statement-page h2{
+  font-family: "Amatica SC", sans-serif;
+  font-size: 40pt;
+  text-align: right;
+}
+
 
 #statement-page p{
   font-family: "Josefin Slab", serif;
@@ -538,12 +556,20 @@ z-index: 100;
   display: block;
   position: relative;
   left: 15px;
+  font-size: 15pt;
+  font-family: "Josefin Slab", serif;
 }
 
 #statement-page h1{
   font-family: "Amatica SC", sans-serif;
   font-size: 40pt;
   text-align: right;
+}
+
+#statement-page h2{
+  font-family: "Amatica SC", sans-serif;
+  font-size: 35pt;
+  text-align: left;
 }
 
 #statement-page p{
@@ -671,12 +697,19 @@ z-index: 100;
   display: block;
   position: relative;
   top: 5px;
+  font-family: "Josefin Slab", serif;
+  font-size: 15pt;
 }
 
 #statement-page h1{
   font-family: "Amatica SC", sans-serif;
   font-size: 40pt;
   text-align: right;
+}
+#statement-page h2{
+  font-family: "Amatica SC", sans-serif;
+  font-size: 40pt;
+  text-align: left;
 }
 
 #statement-page p{
@@ -2030,3 +2063,6 @@ border-radius: 3px;
   text-align: center;
 }
 
+#hiddendate{
+  visibility: hidden;
+}
