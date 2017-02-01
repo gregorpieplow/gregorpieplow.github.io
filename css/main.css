@@ -707,6 +707,7 @@ z-index: 100;
   top: 5px;
   font-family: "Josefin Slab", serif;
   font-size: 15pt;
+  left: 70px;
 }
 
 #statement-page h1{
@@ -729,12 +730,12 @@ z-index: 100;
 .impressum{
   top: 20px;
   text-align: left;
-  left: 50px;
+  left: 70px;
 }
 
 #contact-site{
   top: 10px;
-  left: 50px;
+  left: 70px;
   text-align: left;
 }
 
@@ -2052,6 +2053,11 @@ border-radius: 3px;
 
 .impressum p{
   font-family: "Josefin Slab", serif;
+  font-size: 12pt;
+}
+
+.impressum a{
+ text-decoration: none;
 }
 
 .impressum h1{
