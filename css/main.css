@@ -93,12 +93,12 @@ nav li a:hover {
 }
 
 .impressum{
-  top: 100px;
+  top: 50px;
   text-align: center;
 }
 
 #contact-site{
-  top: 100px;
+  top: 50px;
   text-align: center;
 }
 
@@ -342,12 +342,12 @@ z-index: 100;
 }
 
   .impressum{
-  top: 100px;
+  top: 50px;
   text-align: center;
 }
 
   #contact-site{
-  top: 100px;
+  top: 50px;
   text-align: center;
 }
 
@@ -583,12 +583,12 @@ z-index: 100;
 
 
   .impressum{
-  top: 100px;
+  top: 50px;
   text-align: center;
 }
 
   #contact-site{
-  top: 100px;
+  top: 50px;
   text-align: center;
 }
 
@@ -728,7 +728,7 @@ z-index: 100;
 }
 
 .impressum{
-  top: 20px;
+  top: 10px;
   text-align: left;
   left: 70px;
 }
