@@ -104,6 +104,11 @@ nav li a:hover {
   text-align: center;
 }
 
+#contact-site{
+  top: 100px;
+  text-align: center;
+}
+
   .nav-size-ind-2{
     display: none;
     height: 0px;
@@ -348,6 +353,11 @@ z-index: 100;
   text-align: center;
 }
 
+  #contact-site{
+  top: 100px;
+  text-align: center;
+}
+
     .nav-size-ind-2{
     display: none;
     height: 0px;
@@ -584,6 +594,11 @@ z-index: 100;
   text-align: center;
 }
 
+  #contact-site{
+  top: 100px;
+  text-align: center;
+}
+
   .nav-size-ind{
     display: block;
     height: 0px;
@@ -722,6 +737,13 @@ z-index: 100;
   top: 20px;
   text-align: left;
 }
+
+#contact-site{
+  top: 10px;
+  left: 50px;
+  text-align: left;
+}
+
 
  .nav-size-ind-2{
     display: block;
@@ -2044,6 +2066,26 @@ border-radius: 3px;
 
 .impressum h4{
   font-family: "Amatica SC", sans-serif;
+}
+
+#contact-site p{
+  font-family: "Josefin Slab", serif;
+  font-size: 16pt;
+}
+
+#contact-site h1{
+  font-family: "Amatica SC", sans-serif;
+  font-size: 40pt;
+}
+
+#contact-site h4{
+  font-family: "Amatica SC", sans-serif;
+}
+
+#contact-site a{
+  font-family: "Amatica SC", sans-serif;
+  text-decoration: none;
+  font-size: 28pt;
 }
 
 #blog-post-mikroversum{
