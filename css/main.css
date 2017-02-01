@@ -831,7 +831,7 @@ z-index: 100;
 #blogPosts{
   position: relative;
   top: 25px;
-  left: 50px;
+  left: 25px;
   height: 900px;
 }
 
@@ -2065,4 +2065,8 @@ border-radius: 3px;
 
 #hiddendate{
   visibility: hidden;
+}
+
+#statement-page a{
+  text-decoration: none;
 }
