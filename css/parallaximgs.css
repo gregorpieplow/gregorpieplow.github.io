@@ -167,7 +167,21 @@ ul {
     /*color layers*/
 
 
-    #lay11 {
+    #lay110 {
+    opacity: .1;
+    width: 1104px;
+    height: 878px;
+    background: url("../images/parallax_lg/color-lay.png");
+    background-repeat: no-repeat;
+    }
+    #lay111 {
+    opacity: .1;
+    width: 1104px;
+    height: 878px;
+    background: url("../images/parallax_lg/color-lay.png");
+    background-repeat: no-repeat;
+    }
+    #lay112 {
     opacity: .1;
     width: 1104px;
     height: 878px;
@@ -371,9 +385,22 @@ ul {
 
 
     /*color layers*/
+   #lay110 {
+    opacity: .1;
+    width: 1104px;
+    height: 878px;
+    background-image: url("../images/parallax_lg/color-lay.png");
+    background-repeat: no-repeat;
+    }
+       #lay111 {
+    opacity: .1;
+    width: 1104px;
+    height: 878px;
+    background-image: url("../images/parallax_lg/color-lay.png");
+    background-repeat: no-repeat;
+    }
 
-
-    #lay11 {
+    #lay112 {
     opacity: .1;
     width: 1104px;
     height: 878px;
@@ -467,7 +494,23 @@ ul {
     background: url("../images/parallax_sm/ebene-4.png");
     }
 
-    #lay11s {
+    #lay11s0 {
+    opacity: .1;
+    width: 680px;
+    height: 541px;
+    background: url("../images/parallax_sm/color-lay.png");
+    background-repeat: no-repeat;
+    }
+
+    #lay11s1 {
+    opacity: .1;
+    width: 680px;
+    height: 541px;
+    background: url("../images/parallax_sm/color-lay.png");
+    background-repeat: no-repeat;
+    }
+
+   #lay11s2 {
     opacity: .1;
     width: 680px;
     height: 541px;
@@ -549,7 +592,21 @@ ul {
     background: url("../images/parallax_sm/ebene-4.png");
     }
 
-    #lay11s {
+    #lay11s0 {
+    opacity: .1;
+    width: 680px;
+    height: 541px;
+    background: url("../images/parallax_sm/color-lay.png");
+    background-repeat: no-repeat;
+    }
+       #lay11s1 {
+    opacity: .1;
+    width: 680px;
+    height: 541px;
+    background: url("../images/parallax_sm/color-lay.png");
+    background-repeat: no-repeat;
+    }
+       #lay11s2 {
     opacity: .1;
     width: 680px;
     height: 541px;
