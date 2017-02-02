@@ -431,7 +431,7 @@ ul {
         /*border: 1px dashed black;*/
     }
 
-  #lay1 {
+  #lay1s {
     left: 38px;
     top: 29px;
     width: 845px;
@@ -439,7 +439,7 @@ ul {
     background: url("../images/parallax_sm/ebene-1.png");
     }
 
-    #lay2 {
+    #lay2s {
     left: 200px;
     top: 244px;
     width: 572px;
@@ -451,7 +451,7 @@ ul {
         mix-blend-mode: multiply;
     }
 
-    #lay3 {
+    #lay3s {
     left: 293px;
     top: 261px;
     width: 350px;
@@ -459,7 +459,7 @@ ul {
     background: url("../images/parallax_sm/ebene-3.png");
     }
 
-    #lay4 {
+    #lay4s {
     left: 279px;
     top: 294px;
     width: 373px;
@@ -467,7 +467,7 @@ ul {
     background: url("../images/parallax_sm/ebene-4.png");
     }
 
-    #lay11 {
+    #lay11s {
     opacity: .1;
     width: 680px;
     height: 541px;
@@ -475,17 +475,17 @@ ul {
     background-repeat: no-repeat;
     }
 
-    #lay1p {
+    #lay1ps {
         left: 174px;
         top: 547px;
         mix-blend-mode: multiply;
     }
-    #lay2p {
+    #lay2ps {
         left: 140px;
         top: 502px;
         mix-blend-mode: multiply;
     }
-    #lay3p {
+    #lay3ps {
         left: 131px;
         top: 466px;
         mix-blend-mode: multiply;
@@ -512,7 +512,7 @@ ul {
         /*border: 1px dashed black;*/
     }
 
-  #lay1 {
+  #lay1s {
     left: 38px;
     top: 29px;
     width: 845px;
@@ -520,7 +520,7 @@ ul {
     background: url("../images/parallax_sm/ebene-1.png");
     }
 
-    #lay2 {
+    #lay2s {
     left: 200px;
     top: 244px;
     width: 572px;
@@ -533,7 +533,7 @@ ul {
         mix-blend-mode: multiply;
     }
 
-    #lay3 {
+    #lay3s {
     left: 293px;
     top: 261px;
     width: 350px;
@@ -541,7 +541,7 @@ ul {
     background: url("../images/parallax_sm/ebene-3.png");
     }
 
-    #lay4 {
+    #lay4s {
     left: 279px;
     top: 294px;
     width: 373px;
@@ -549,7 +549,7 @@ ul {
     background: url("../images/parallax_sm/ebene-4.png");
     }
 
-    #lay11 {
+    #lay11s {
     opacity: .1;
     width: 680px;
     height: 541px;
@@ -557,17 +557,17 @@ ul {
     background-repeat: no-repeat;
     }
 
-    #lay1p {
+    #lay1ps {
         left: 174px;
         top: 547px;
         mix-blend-mode: multiply;
     }
-    #lay2p {
+    #lay2ps {
         left: 140px;
         top: 502px;
         mix-blend-mode: multiply;
     }
-    #lay3p {
+    #lay3ps {
         left: 131px;
         top: 466px;
         mix-blend-mode: multiply;
