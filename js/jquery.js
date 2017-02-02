@@ -491,7 +491,8 @@ $("#lay4").toggleClass("lay-active5");
 }),
 $(".nav-link-wrapper.contact").hover(function(){
 $("#lay5").toggleClass("lay-active5");
-})}
+});
+}
 ;
 
 $(".thumbnail-gal").click(function(){

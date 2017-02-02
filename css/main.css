@@ -1132,10 +1132,20 @@ z-index: 100;
  -webkit-transform: rotate(-90deg);
 }
 
+.lay-active10 {
+  -webkit-transform: rotate(5deg) scale(.9);
+}
+
+.lay-active11{
+  -webkit-transform: rotate(-7deg) scale(.8);
+}
+
+.lay-active12{
+  -webkit-transform: rotate(10deg) scale(.7);
+}
 
 
 /*front page styling */
-
 
 
 @keyframes eye {
@@ -2112,3 +2122,4 @@ border-radius: 3px;
 #statement-page a{
   text-decoration: none;
 }
+
