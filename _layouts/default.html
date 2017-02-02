@@ -2,10 +2,19 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
 {% include head.html %}
+
  
 {% capture id %}{{ page.url | replace:'/','' }}{% endcapture %}
 
+{% if id == '' %}
+
+<body id="main">
+
+{% else %}
+
 <body id="{{id}}">
+
+{% endif %}
 
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
