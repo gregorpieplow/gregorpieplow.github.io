@@ -103,14 +103,14 @@ $(window).resize(markactive);
  var h = activeelement.height();
  var pathHeight = activeelement.find("svg").height();
  var r = h/pathHeight ;
- activeelement.find("#hover-scribble").css("transform", "scale(" + r +","+ r + ")")
- activeelement.find("#hover-scribble").show();
+ activeelement.find(".hover-scribble").css("transform", "scale(" + r +","+ r + ")")
+ activeelement.find(".hover-scribble").show();
  }else{
  var h = activeelement.width();
  var pathHeight = activeelement.find("svg").width();
  var r = h/pathHeight ;
- activeelement.find("#hover-scribble").css("transform", "scale(" + r +","+ r + ")")
- activeelement.find("#hover-scribble").show();
+ activeelement.find(".hover-scribble").css("transform", "scale(" + r +","+ r + ")")
+ activeelement.find(".hover-scribble").show();
 }
 ;
 };    

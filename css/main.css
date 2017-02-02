@@ -1077,13 +1077,13 @@ z-index: 100;
 
 /* path animate */
 
-#hover-scribble {
+.hover-scribble {
   position: absolute;
   display: none;
   z-index: -2;
 }
 
-#scribble-svg {
+.scribble-svg {
   position: absolute;
   display: block;
   top: 0%;
