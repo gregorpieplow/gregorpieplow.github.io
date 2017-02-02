@@ -167,27 +167,14 @@ ul {
     /*color layers*/
 
 
-    #lay110 {
+    .lay11 {
     opacity: .1;
     width: 1104px;
     height: 878px;
     background: url("../images/parallax_lg/color-lay.png");
     background-repeat: no-repeat;
     }
-    #lay111 {
-    opacity: .1;
-    width: 1104px;
-    height: 878px;
-    background: url("../images/parallax_lg/color-lay.png");
-    background-repeat: no-repeat;
-    }
-    #lay112 {
-    opacity: .1;
-    width: 1104px;
-    height: 878px;
-    background: url("../images/parallax_lg/color-lay.png");
-    background-repeat: no-repeat;
-    }
+ 
 
     #lay15p {
         left: 288px;
@@ -385,28 +372,14 @@ ul {
 
 
     /*color layers*/
-   #lay110 {
+   .lay11 {
     opacity: .1;
     width: 1104px;
     height: 878px;
     background-image: url("../images/parallax_lg/color-lay.png");
     background-repeat: no-repeat;
     }
-       #lay111 {
-    opacity: .1;
-    width: 1104px;
-    height: 878px;
-    background-image: url("../images/parallax_lg/color-lay.png");
-    background-repeat: no-repeat;
-    }
-
-    #lay112 {
-    opacity: .1;
-    width: 1104px;
-    height: 878px;
-    background-image: url("../images/parallax_lg/color-lay.png");
-    background-repeat: no-repeat;
-    }
+  
 
     #lay15p {
         left: 288px;
@@ -494,7 +467,7 @@ ul {
     background: url("../images/parallax_sm/ebene-4.png");
     }
 
-    #lay11s0 {
+    .lay11s {
     opacity: .1;
     width: 680px;
     height: 541px;
@@ -502,21 +475,6 @@ ul {
     background-repeat: no-repeat;
     }
 
-    #lay11s1 {
-    opacity: .1;
-    width: 680px;
-    height: 541px;
-    background: url("../images/parallax_sm/color-lay.png");
-    background-repeat: no-repeat;
-    }
-
-   #lay11s2 {
-    opacity: .1;
-    width: 680px;
-    height: 541px;
-    background: url("../images/parallax_sm/color-lay.png");
-    background-repeat: no-repeat;
-    }
 
     #lay1ps {
         left: 174px;
@@ -592,28 +550,14 @@ ul {
     background: url("../images/parallax_sm/ebene-4.png");
     }
 
-    #lay11s0 {
+    .lay11s {
     opacity: .1;
     width: 680px;
     height: 541px;
     background: url("../images/parallax_sm/color-lay.png");
     background-repeat: no-repeat;
     }
-       #lay11s1 {
-    opacity: .1;
-    width: 680px;
-    height: 541px;
-    background: url("../images/parallax_sm/color-lay.png");
-    background-repeat: no-repeat;
-    }
-       #lay11s2 {
-    opacity: .1;
-    width: 680px;
-    height: 541px;
-    background: url("../images/parallax_sm/color-lay.png");
-    background-repeat: no-repeat;
-    }
-
+   
     #lay1ps {
         left: 174px;
         top: 547px;
