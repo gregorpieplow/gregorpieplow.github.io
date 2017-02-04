@@ -1883,7 +1883,7 @@ z-index: 100;
   /*width: 70px;*/
   margin-right: 10px;
   /*margin-top: 17px;  */
-  float: right;
+  float: left;
   /*background-size: contain;*/
   opacity: .6;
   font-family: "Amatica SC", sans-serif;
@@ -1959,7 +1959,7 @@ z-index: 100;
   /*width: 70px;*/
   margin-right: 10px;
   margin-top: 17px;  
-  float: right;
+  float: left;
   /*background-size: contain;*/
   opacity: .6;
   font-family: "Amatica SC", sans-serif;
