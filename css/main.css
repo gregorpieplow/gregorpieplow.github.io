@@ -1026,6 +1026,12 @@ z-index: 100;
   background-size: cover;
 }
 
+.thumb7{
+  background: url("../images/art/thumb/7.jpg");
+   background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 /*carousel images styling*/
 
@@ -1270,7 +1276,11 @@ z-index: 100;
   background-repeat: no-repeat;
 }
 
-
+#car-item-7{
+  background-image: url("../images/art/lg/7.jpg"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 .zoom-item{
   cursor: -webkit-grab !important;
