@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
 @font-face {
     font-family: "moonflower";
-    src: url('../font/Moon_Flower.ttf') format('truetype') ;
+    src: url('../font/Moon Flower Bold.ttf') format('truetype') ;
 }
 
 *{
@@ -709,8 +709,8 @@ z-index: 100;
   display: block;
   position: relative;
   top: 5px;
-  font-family: "moonflower", serif;
-  font-size: 15pt;
+  font-family: "Josefin Slab", serif;
+  font-size: 14pt;
   left: 70px;
 }
 
