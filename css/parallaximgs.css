@@ -503,8 +503,8 @@ ul {
 
   #parallax-img-small{
         transform: scale(.5,.5);
-        margin-left: -95%;
-        margin-top: 0%;
+        margin-left: -89%;
+        margin-top: -10%;
     }
 
   .scene li div{
