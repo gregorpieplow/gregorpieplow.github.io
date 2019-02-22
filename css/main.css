@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Amatica+SC');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
 @font-face {
     font-family: "moonflower";
     src: url('../font/Moon Flower Bold.ttf') format('truetype') ;
@@ -79,13 +80,13 @@ nav li a:hover {
 }
 
 #statement-page h1{
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   font-size: 40pt;
   text-align: right;
 }
 
 #statement-page h2{
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   font-size: 38pt;
   text-align: right;
 }
@@ -327,13 +328,13 @@ z-index: 100;
 }
 
 #statement-page h1{
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   font-size: 40pt;
   text-align: right;
 }
 
 #statement-page h2{
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   font-size: 40pt;
   text-align: right;
 }
@@ -568,13 +569,13 @@ z-index: 100;
 }
 
 #statement-page h1{
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   font-size: 40pt;
   text-align: right;
 }
 
 #statement-page h2{
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   font-size: 35pt;
   text-align: left;
 }
@@ -715,12 +716,13 @@ z-index: 100;
 }
 
 #statement-page h1{
-  font-family: "moonflower", sans-serif;
+  /*font-family: "moonflower", sans-serif;*/
+  font-family: "EB Garamond", sans-serif;
   font-size: 40pt;
   text-align: right;
 }
 #statement-page h2{
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   font-size: 40pt;
   text-align: left;
 }
@@ -890,7 +892,7 @@ z-index: 100;
     }
 
     .quote{
-      font-family: 'Amatica SC', sans-serif;
+      font-family: 'EB Garamond', sans-serif;
       font-weight: 100;
       line-height: 20px;
       font-size: 28pt;
@@ -927,7 +929,7 @@ z-index: 100;
     }
 
     .quote{
-  font-family: 'Amatica SC', sans-serif;
+  font-family: 'EB Garamond', sans-serif;
   font-weight: 100;
   line-height: 20px;
   font-size: 28pt;
@@ -969,7 +971,7 @@ z-index: 100;
     }
 
     .quote{
-  font-family: 'Amatica SC', sans-serif;
+  font-family: 'EB Garamond', sans-serif;
   font-weight: 100;
   line-height: 20px;
   font-size: 28pt;
@@ -1437,7 +1439,7 @@ z-index: 100;
 }
 
 .info-box h1{
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   text-indent: 10px;
 }
 
@@ -1618,7 +1620,7 @@ z-index: 100;
 
 
 .info-box h1{
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   text-indent: 20px;
 }
 
@@ -1738,7 +1740,7 @@ z-index: 100;
   float: right;
   /*background-size: contain;*/
   opacity: .6;
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   font-size: 17pt;
 }
 
@@ -1831,7 +1833,7 @@ z-index: 100;
   float: right;
   /*background-size: contain;*/
   opacity: .6;
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   font-size: 17pt;
 }
 
@@ -1857,7 +1859,7 @@ z-index: 100;
   top: 100px;
   height: 200px;
   font-size: 18pt;
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   width: 100%;
 }
 
@@ -1866,7 +1868,7 @@ z-index: 100;
   top: 850px;
   height: 200px;
   font-size: 18pt;
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   width: 100%;
 }
 
@@ -1900,7 +1902,7 @@ z-index: 100;
   float: left;
   /*background-size: contain;*/
   opacity: .6;
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   font-size: 17pt;
 }
 
@@ -1934,7 +1936,7 @@ z-index: 100;
   top: 100px;
   height: 200px;
   font-size: 18pt;
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   width: 100%;
 }
 
@@ -1943,7 +1945,7 @@ z-index: 100;
   top: 550px;
   height: 200px;
   font-size: 18pt;
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   width: 100%;
 }
 
@@ -1976,7 +1978,7 @@ z-index: 100;
   float: left;
   /*background-size: contain;*/
   opacity: .6;
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   font-size: 17pt;
 }
 
@@ -1987,16 +1989,16 @@ z-index: 100;
 }
 
 .footer-styling h1{
-  font-family: 'Amatica SC', sans-serif;
+  font-family: 'EB Garamond', sans-serif;
   font-size: 17pt;
-  /*font-family: "Open Sans Condensed", sans-serif;*/
+  /*font-family: "EB Garamond", sans-serif;*/
  
 }
 
 
 .footer-styling h4{
-  /*font-family: "Open Sans Condensed", sans-serif;*/
-  font-family: 'Amatica SC', sans-serif;
+  /*font-family: "EB Garamond", sans-serif;*/
+  font-family: 'EB Garamond', sans-serif;
 }
 
 .footer-styling p{
@@ -2143,11 +2145,11 @@ border-radius: 3px;
 }
 
 .impressum h1{
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
 }
 
 .impressum h4{
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
 }
 
 #contact-site p{
@@ -2156,16 +2158,16 @@ border-radius: 3px;
 }
 
 #contact-site h1{
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   font-size: 40pt;
 }
 
 #contact-site h4{
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
 }
 
 #contact-site a{
-  font-family: "Amatica SC", sans-serif;
+  font-family: "EB Garamond", sans-serif;
   text-decoration: none;
   font-size: 28pt;
 }
@@ -2178,8 +2180,8 @@ border-radius: 3px;
 }
 
 .mikroversum-cont{
-  font-family: "Amatica SC", sans-serif;
-  font-size: 35pt;
+  font-family: "EB Garamond", sans-serif;
+  font-size: 25pt;
   width: 100%;
   margin-top: 50%;
   transform: translateY(-50%);
