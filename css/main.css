@@ -81,13 +81,13 @@ nav li a:hover {
 
 #statement-page h1{
   font-family: "EB Garamond", sans-serif;
-  font-size: 40pt;
+  font-size: 25pt;
   text-align: right;
 }
 
 #statement-page h2{
   font-family: "EB Garamond", sans-serif;
-  font-size: 38pt;
+  font-size: 25pt;
   text-align: right;
 }
 
@@ -329,13 +329,13 @@ z-index: 100;
 
 #statement-page h1{
   font-family: "EB Garamond", sans-serif;
-  font-size: 40pt;
+  font-size: 30pt;
   text-align: right;
 }
 
 #statement-page h2{
   font-family: "EB Garamond", sans-serif;
-  font-size: 40pt;
+  font-size: 25pt;
   text-align: right;
 }
 
@@ -570,13 +570,13 @@ z-index: 100;
 
 #statement-page h1{
   font-family: "EB Garamond", sans-serif;
-  font-size: 40pt;
+  font-size: 30pt;
   text-align: right;
 }
 
 #statement-page h2{
   font-family: "EB Garamond", sans-serif;
-  font-size: 35pt;
+  font-size: 25pt;
   text-align: left;
 }
 
@@ -718,12 +718,12 @@ z-index: 100;
 #statement-page h1{
   /*font-family: "moonflower", sans-serif;*/
   font-family: "EB Garamond", sans-serif;
-  font-size: 40pt;
+  font-size: 30pt;
   text-align: right;
 }
 #statement-page h2{
   font-family: "EB Garamond", sans-serif;
-  font-size: 40pt;
+  font-size: 25pt;
   text-align: left;
 }
 
@@ -2159,7 +2159,7 @@ border-radius: 3px;
 
 #contact-site h1{
   font-family: "EB Garamond", sans-serif;
-  font-size: 40pt;
+  font-size: 30pt;
 }
 
 #contact-site h4{
@@ -2169,7 +2169,7 @@ border-radius: 3px;
 #contact-site a{
   font-family: "EB Garamond", sans-serif;
   text-decoration: none;
-  font-size: 28pt;
+  font-size: 20pt;
 }
 
 #blog-post-mikroversum{

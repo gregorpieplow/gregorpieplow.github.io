@@ -502,9 +502,9 @@ ul {
   } 
 
   #parallax-img-small{
+        display: block;
         transform: scale(.5,.5);
-        margin-left: -89%;
-        margin-top: -10%;
+        position: absolute;
     }
 
   .scene li div{

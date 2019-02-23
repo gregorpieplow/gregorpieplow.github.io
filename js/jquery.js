@@ -594,7 +594,22 @@ $(".zoom-closer").click(function(){
                 $(".top-nav-car").css("display","inline-block");
             };
 });
-
+//center main
+$(document).ready(function() {
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    $("#parallax-img-small").css("left",0);
+    var ofs = $("#parallax-img-small").offset().left;
+    var d = 845/2;
+    var e = Math.abs(d - w)/2;
+    console.log(e, w, d)
+    if (d-w > 0){
+        $("#parallax-img-small").css("left",-ofs-e-30);
+        console.log($("#parallax-img-small").offset().left);
+    }else{
+        $("#parallax-img-small").css("left",-ofs+e-30);
+    };
+    }
+)
 
 // tumblr posts
 
