@@ -38,13 +38,29 @@
  */
 ;(function(window, document, undefined) {
 
+  var check = false;
+  if( navigator.userAgent.match(/Android/i)
+  || navigator.userAgent.match(/webOS/i)
+  || navigator.userAgent.match(/iPhone/i)
+  || navigator.userAgent.match(/iPad/i)
+  || navigator.userAgent.match(/iPod/i)
+  || navigator.userAgent.match(/BlackBerry/i)
+  || navigator.userAgent.match(/Windows Phone/i)
+  ){
+     var check = true;
+   }
+  
+  console.log(check)
+
   // Strict Mode
   'use strict';
 
+  
   // Constants
   var NAME = 'Parallax';
   var MAGIC_NUMBER = 30;
-  var DEFAULTS = {
+  if (check){
+    var DEFAULTS = {
     relativeInput: false,
     clipRelativeInput: false,
     calibrationThreshold: 100,
@@ -52,8 +68,8 @@
     supportDelay: 500,
     calibrateX: false,
     calibrateY: true,
-    invertX: false,
-    invertY: false,
+    invertX: true,
+    invertY: true,
     limitX: false,
     limitY: false,
     scalarX: 10.0,
@@ -61,8 +77,28 @@
     frictionX: 0.1,
     frictionY: 0.1,
     originX: 0.5,
-    originY: 0.5
+    originY: 0.5};
+  }else{
+    var DEFAULTS = {
+      relativeInput: false,
+      clipRelativeInput: false,
+      calibrationThreshold: 100,
+      calibrationDelay: 500,
+      supportDelay: 500,
+      calibrateX: false,
+      calibrateY: true,
+      invertX: false,
+      invertY: false,
+      limitX: false,
+      limitY: false,
+      scalarX: 10.0,
+      scalarY: 10.0,
+      frictionX: 0.1,
+      frictionY: 0.1,
+      originX: 0.5,
+      originY: 0.5};
   };
+  
 
   function Parallax(element, options) {
 
