@@ -69,7 +69,7 @@
     calibrateX: false,
     calibrateY: true,
     invertX: true,
-    invertY: true,
+    invertY: false,
     limitX: false,
     limitY: false,
     scalarX: 10.0,
